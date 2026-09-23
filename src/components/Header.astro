@@ -1,0 +1,36 @@
+---
+import Icon from './Icon.astro';
+const home = import.meta.env.BASE_URL;
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href={home} aria-label="Slick home">slick<span>.</span></a>
+    <button class="menu-toggle surface-small" aria-expanded="false" aria-controls="main-navigation" aria-label="Open navigation" hidden><span></span><span></span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <a href={`${home}#services`}>Services</a>
+      <a href={`${home}#approach`}>Approach</a>
+      <a href={`${home}#tools`}>Toolkit</a>
+      <a href={`${home}#about`}>About</a>
+      <a class="button button-small" href={`${home}#contact`}>Let’s talk <Icon name="diagonal" size={16} /></a>
+    </nav>
+  </div>
+</header>
+<script>
+  const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const navigation = document.querySelector<HTMLElement>('#main-navigation');
+  if (button && navigation) {
+    button.hidden = false;
+    navigation.classList.add('enhanced');
+    const close = () => { button.setAttribute('aria-expanded', 'false'); button.setAttribute('aria-label', 'Open navigation'); navigation.classList.remove('is-open'); };
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      navigation.classList.toggle('is-open', open);
+    });
+    navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { close(); button.focus(); } });
+    document.addEventListener('click', event => { if (event.target instanceof Node && !navigation.contains(event.target) && !button.contains(event.target)) close(); });
+    matchMedia('(min-width: 768px)').addEventListener('change', close);
+  }
+</script>

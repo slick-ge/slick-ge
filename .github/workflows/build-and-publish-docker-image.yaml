@@ -1,0 +1,101 @@
+name: Build and Push Docker Image
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docker-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  REGISTRY: docker.io
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run check && npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: dist/
+
+  smoke-test:
+    needs: validate
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [linux/amd64, linux/arm64]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: ${{ matrix.platform }}
+          load: true
+          tags: slick-ge:test
+          cache-from: type=gha,scope=${{ matrix.platform }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.platform }}
+      - name: Check unprivileged, read-only container
+        env:
+          PLATFORM: ${{ matrix.platform }}
+        run: |
+          docker run -d --name website --platform "$PLATFORM" --read-only --tmpfs /tmp --cap-drop ALL --security-opt no-new-privileges:true -p 8080:8080 slick-ge:test
+          trap 'docker logs website; docker rm -f website' EXIT
+          curl --fail --retry 15 --retry-delay 2 --retry-connrefused http://localhost:8080/healthz
+          curl --fail http://localhost:8080/ | grep -q 'Less manual work'
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/missing-page)" = 404
+
+  build-and-push:
+    if: github.event_name != 'pull_request'
+    needs: smoke-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Get secrets from Bitwarden
+        uses: bitwarden/sm-action@v2
+        with:
+          access_token: ${{ secrets.BW_ACCESS_TOKEN }}
+          secrets: |
+            a35d32e4-fc58-4d80-a927-b35400c210f7 > DOCKERHUB_USERNAME
+            5f8b4016-fb5d-45fc-9e13-b35400be5c46 > DOCKERHUB_SECRET
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ env.DOCKERHUB_USERNAME }}
+          password: ${{ env.DOCKERHUB_SECRET }}
+      - name: Build and push slick-ge
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ${{ env.DOCKERHUB_USERNAME }}/slick-ge:latest
+            ${{ env.DOCKERHUB_USERNAME }}/slick-ge:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
