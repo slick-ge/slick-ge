@@ -106,11 +106,9 @@ nav > a:hover { color: var(--accent-strong); }
 .tool-group ul { display: flex; flex-wrap: wrap; gap: 12px; padding-bottom: 26px; }
 .tool-group li { padding: 8px 15px; border-radius: 12px; box-shadow: var(--shadow-inset-small); font-size: .75rem; }
 .about-card { display: grid; grid-template-columns: .7fr 1.3fr; gap: 65px; align-items: center; padding: 64px; }
-.about-mark { aspect-ratio: 1; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 26px; }
-.about-mark > div { height: 145px; width: 145px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 3.6rem; letter-spacing: -.09em; font-weight: 800; }
+.about-mark { width: 100%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; }
 .small-avatar img, .about-mark img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .small-avatar { flex-shrink: 0; }
-.about-mark small { font-size: .48rem; letter-spacing: .14em; }
 .about-card h2 { margin: 18px 0 20px; }
 .about-card p:not(.eyebrow) { margin-top: 16px; color: var(--muted); font-size: .9rem; }
 .about-card .about-lead { color: var(--text) !important; font-size: 1.05rem !important; }
@@ -143,8 +141,6 @@ nav > a:hover { color: var(--accent-strong); }
   .pipeline-core > span { font-size: .7rem; }
   .specialties { flex-direction: column; }
   .about-card { padding: 40px; gap: 35px; }
-  .about-mark > div { height: 110px; width: 110px; }
-  .about-mark small { display: none; }
   .process-grid { gap: 24px; }
 }
 @media (max-width: 767px) {
@@ -185,7 +181,6 @@ nav > a:hover { color: var(--accent-strong); }
   .tool-group h3 { font-size: .9rem; }
   .about-card { grid-template-columns: 1fr; padding: 30px; gap: 32px; }
   .about-mark { width: 180px; justify-self: center; }
-  .about-mark > div { width: 115px; height: 115px; }
   .contact-card { padding: 40px 24px; }
   .email-link { font-size: .7rem; }
   .site-footer { flex-wrap: wrap; gap: 15px; padding-block: 36px; }
