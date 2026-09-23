@@ -1,17 +1,27 @@
 ---
 import Icon from './Icon.astro';
-const home = import.meta.env.BASE_URL;
+import { translator, localePath, type Locale } from '../i18n';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = translator(locale);
+const home = localePath(locale);
 ---
 <header class="site-header">
   <div class="container header-inner">
-    <a class="wordmark" href={home} aria-label="Slick home">slick<span>.</span></a>
-    <button class="menu-toggle surface-small" aria-expanded="false" aria-controls="main-navigation" aria-label="Open navigation" hidden><span></span><span></span></button>
-    <nav id="main-navigation" aria-label="Main navigation">
-      <a href={`${home}#services`}>Services</a>
-      <a href={`${home}#approach`}>Approach</a>
-      <a href={`${home}#tools`}>Toolkit</a>
-      <a href={`${home}#about`}>About</a>
-      <a class="button button-small" href={`${home}#contact`}>Let’s talk <Icon name="diagonal" size={16} /></a>
+    <a class="wordmark" href={home} aria-label={t("Slick home")}>slick<span>.</span></a>
+    <div class="header-controls">
+      <div class="language-switch well" role="group" aria-label={t("Choose language")}>
+        <a href={localePath('ka')} lang="ka" hreflang="ka" aria-label="ქართული" aria-current={locale === 'ka' ? 'page' : undefined}>ქარ</a>
+        <a href={localePath('en')} lang="en" hreflang="en" aria-label="English" aria-current={locale === 'en' ? 'page' : undefined}>EN</a>
+      </div>
+    <button class="menu-toggle surface-small" aria-expanded="false" aria-controls="main-navigation" data-open-label={t("Open navigation")} data-close-label={t("Close navigation")} aria-label={t("Open navigation")} hidden><span></span><span></span></button>
+    </div>
+    <nav id="main-navigation" aria-label={t("Main navigation")}>
+      <a href={`${home}#services`}>{t("Services")}</a>
+      <a href={`${home}#approach`}>{t("Approach")}</a>
+      <a href={`${home}#tools`}>{t("Toolkit")}</a>
+      <a href={`${home}#about`}>{t("About")}</a>
+      <a class="button button-small" href={`${home}#contact`}>{t("Let’s talk")} <Icon name="diagonal" size={16} /></a>
     </nav>
   </div>
 </header>
@@ -21,11 +31,11 @@ const home = import.meta.env.BASE_URL;
   if (button && navigation) {
     button.hidden = false;
     navigation.classList.add('enhanced');
-    const close = () => { button.setAttribute('aria-expanded', 'false'); button.setAttribute('aria-label', 'Open navigation'); navigation.classList.remove('is-open'); };
+    const close = () => { button.setAttribute('aria-expanded', 'false'); button.setAttribute('aria-label', button.dataset.openLabel!); navigation.classList.remove('is-open'); };
     button.addEventListener('click', () => {
       const open = button.getAttribute('aria-expanded') !== 'true';
       button.setAttribute('aria-expanded', String(open));
-      button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      button.setAttribute('aria-label', open ? button.dataset.closeLabel! : button.dataset.openLabel!);
       navigation.classList.toggle('is-open', open);
     });
     navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
@@ -33,4 +43,13 @@ const home = import.meta.env.BASE_URL;
     document.addEventListener('click', event => { if (event.target instanceof Node && !navigation.contains(event.target) && !button.contains(event.target)) close(); });
     matchMedia('(min-width: 768px)').addEventListener('change', close);
   }
+</script>
+
+<script>
+  // Keep the reader at the same section when changing language.
+  document.querySelectorAll<HTMLAnchorElement>('.language-switch a').forEach(link => {
+    const update = () => { link.hash = window.location.hash; };
+    update();
+    window.addEventListener('hashchange', update);
+  });
 </script>

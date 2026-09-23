@@ -1,0 +1,24 @@
+---
+import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/noto-sans-georgian';
+import '../styles/global.css';
+import { translations, localePath } from '../i18n';
+// A development-only review page: no review route is emitted by astro build.
+export function getStaticPaths() {
+  return import.meta.env.DEV ? [{ params: { review: 'translations' } }] : [];
+}
+---
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="robots" content="noindex,nofollow" /><title>Slick - Translation review</title></head>
+  <body>
+    <main class="container translation-review">
+      <p class="eyebrow">LOCAL REVIEW · DRAFT TRANSLATIONS</p>
+      <h1>Georgian & English</h1>
+      <p>Both columns come from the same translation dictionary used by the website. Product names remain unchanged. Send corrections using the row number or English phrase.</p>
+      <div class="hero-actions"><a class="button" href={localePath('ka')} lang="ka">ქართული ვერსია ↗</a><a class="button" href={localePath('en')}>English version ↗</a></div>
+      <div class="translation-table" role="region" aria-label="Translation comparison" tabindex="0">
+        <table><caption>Website copy, metadata, and accessibility labels</caption><thead><tr><th scope="col">#</th><th scope="col">ქართული</th><th scope="col">English</th></tr></thead><tbody>{Object.entries(translations).map(([en, ka], index) => <tr><th scope="row">{index + 1}</th><td lang="ka">{ka}</td><td lang="en">{en}</td></tr>)}</tbody></table>
+      </div>
+    </main>
+  </body>
+</html>

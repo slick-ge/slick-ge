@@ -15,3 +15,7 @@ Astro static output, TypeScript, plain CSS, reusable Astro components, local con
 Docker Hub DOCKERHUB_USERNAME/slick-ge, linux/amd64 and linux/arm64, latest and full-commit-SHA tags. Follow the reference auth-slick-ge workflow: Bitwarden credentials, QEMU, Buildx, Docker Hub login, and GHA cache. User manages ingress and certificates. The other repository will change its image destination separately.
 
 The container serves HTTP on 8080 as UID 101, supports a read-only root with writable /tmp, and exposes /healthz. Static dist output remains independently deployable. SITE_URL and BASE_PATH are build-time options for static hosting. The supplied container configuration serves at the domain root. Kubernetes resources are out of scope.
+
+## Copy style
+
+Use regular hyphens (-), not em dashes or en dashes, in website copy, translations, and documentation.

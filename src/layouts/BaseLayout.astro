@@ -1,14 +1,18 @@
 ---
 import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/noto-sans-georgian';
 import '@fontsource-variable/plus-jakarta-sans';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
-interface Props { title?: string; description?: string; }
-const { title = 'Slick — DevOps & automation for small software teams', description = 'Aleksandre Ghvineria helps small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure.' } = Astro.props;
+import { translator, localePath, type Locale } from '../i18n';
+interface Props { locale?: Locale; title?: string; description?: string; alternates?: boolean; }
+const { locale = 'ka', alternates = true } = Astro.props;
+const t = translator(locale);
+const { title = t('Slick - DevOps & automation for small software teams'), description = t('I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure.') } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,6 +20,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {alternates && <>
+      <link rel="alternate" hreflang="ka" href={new URL(localePath('ka'), Astro.site)} />
+      <link rel="alternate" hreflang="en" href={new URL(localePath('en'), Astro.site)} />
+      <link rel="alternate" hreflang="x-default" href={new URL(localePath('ka'), Astro.site)} />
+    </>}
+    <meta property="og:locale" content={locale === 'ka' ? 'ka_GE' : 'en_US'} />
+    <meta property="og:locale:alternate" content={locale === 'ka' ? 'en_US' : 'ka_GE'} />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -23,9 +34,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonical} />
   </head>
   <body>
-    <a class="skip-link button" href="#main">Skip to content</a>
-    <Header />
+    <a class="skip-link button" href="#main">{t("Skip to content")}</a>
+    <Header locale={locale} />
     <main id="main"><slot /></main>
-    <footer class="container site-footer"><a class="wordmark" href={import.meta.env.BASE_URL} aria-label="Slick home">slick<span>.</span></a><p>Independent expertise. Thoughtful engineering.</p><span>© {new Date().getFullYear()} Slick</span></footer>
+    <footer class="container site-footer"><a class="wordmark" href={localePath(locale)} aria-label={t("Slick home")}>slick<span>.</span></a><p>{t("Independent expertise. Thoughtful engineering.")}</p><span>© {new Date().getFullYear()} Slick</span></footer>
   </body>
 </html>

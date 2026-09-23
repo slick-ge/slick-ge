@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:4321. Copy and tools live in `src/data/site.ts` and `src/pages/index.astro`. Design tokens live in `src/styles/tokens.css`.
+Open http://localhost:4321. Shared page sections live in `src/components/LandingPage.astro`, tools and service copy in `src/data/site.ts`, and Georgian translations in `src/i18n/ka.json`. Design tokens live in `src/styles/tokens.css`.
 
 ## Validate
 
@@ -47,3 +47,9 @@ See [the brief](docs/website-brief.md) for the agreed scope.
 ## GitHub Pages deployment
 
 Pushes to main also deploy the static site to GitHub Pages with `slick.ge` as its custom domain. See [DNS and HTTPS setup](docs/github-pages.md) for the records to configure.
+
+## Languages and translation review
+
+Georgian is the default at `/`; English is at `/en/`. The header switcher uses ordinary links, with optional JavaScript to preserve the current section. Each version has its own canonical URL, language metadata, and hreflang links. Both versions use the same Astro components. Georgian uses self-hosted Noto Sans Georgian.
+
+During `npm run dev`, open `/translations` for the full Georgian/English side-by-side review. That route is excluded from production builds. Run `npm run translations:review` after editing translations to refresh `docs/translations.md`. Missing Georgian translations fail the build rather than silently showing English.
