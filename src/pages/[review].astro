@@ -1,6 +1,5 @@
 ---
-import '@fontsource-variable/dm-sans';
-import '@fontsource-variable/noto-sans-georgian';
+import Fonts from '../components/Fonts.astro';
 import '../styles/global.css';
 import { translations, localePath } from '../i18n';
 // A development-only review page: no review route is emitted by astro build.
@@ -9,7 +8,7 @@ export function getStaticPaths() {
 }
 ---
 <html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="robots" content="noindex,nofollow" /><title>Slick - Translation review</title></head>
+  <head><meta charset="UTF-8" /><Fonts locale="both" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="robots" content="noindex,nofollow" /><title>Slick - Translation review</title></head>
   <body>
     <main class="container translation-review">
       <p class="eyebrow">LOCAL REVIEW · DRAFT TRANSLATIONS</p>

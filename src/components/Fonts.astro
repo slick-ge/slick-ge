@@ -1,0 +1,14 @@
+---
+import '../styles/fonts.css';
+import dmSans from '@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url';
+import jakarta from '@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2?url';
+import georgian from '@fontsource-variable/noto-sans-georgian/files/noto-sans-georgian-georgian-wght-normal.woff2?url';
+import georgianLatin from '@fontsource-variable/noto-sans-georgian/files/noto-sans-georgian-latin-wght-normal.woff2?url';
+interface Props { locale: 'ka' | 'en' | 'both'; }
+const { locale } = Astro.props;
+// Both languages need the Georgian switch label and the Latin Slick wordmark.
+const fonts = [jakarta, georgian];
+if (locale !== 'ka') fonts.push(dmSans);
+if (locale !== 'en') fonts.push(georgianLatin);
+---
+{fonts.map(href => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin="anonymous" />)}

@@ -1,7 +1,5 @@
 ---
-import '@fontsource-variable/dm-sans';
-import '@fontsource-variable/noto-sans-georgian';
-import '@fontsource-variable/plus-jakarta-sans';
+import Fonts from '../components/Fonts.astro';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import { translator, localePath, type Locale } from '../i18n';
@@ -15,6 +13,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 <html lang={locale}>
   <head>
     <meta charset="UTF-8" />
+    <Fonts locale={locale} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#E0E5EC" />
     <title>{title}</title>
