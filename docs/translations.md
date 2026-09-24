@@ -5,8 +5,8 @@ Georgian is served at /, English at /en/. Product names stay unchanged.
 
 | # | ქართული | English |
 | --- | --- | --- |
-| 1 | Slick - DevOps და ავტომატიზაცია მცირე პროგრამული გუნდებისთვის | Slick - DevOps & automation for small software teams |
-| 2 | მე ვეხმარები მცირე პროგრამულ გუნდებს პროცესების ავტომატიზაციაში, CI/CD-ის გაუმჯობესებაში, კოდის უსაფრთხოების გაძლიერებასა და ინფრასტრუქტურის გამარტივებაში. | I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure. |
+| 1 | Slick - DevOps და ავტომატიზაცია მცირე გუნდებისთვის | Slick - DevOps & automation for small software teams |
+| 2 | მე ვეხმარები მცირე გუნდებს პროცესების ავტომატიზაციაში, CI/CD-ის გაუმჯობესებაში, კოდის უსაფრთხოების გაძლიერებასა და ინფრასტრუქტურის გამარტივებაში. | I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure. |
 | 3 | Slick - მთავარი გვერდი | Slick home |
 | 4 | მენიუს გახსნა | Open navigation |
 | 5 | მენიუს დახურვა | Close navigation |
@@ -19,11 +19,11 @@ Georgian is served at /, English at /en/. Product names stay unchanged.
 | 12 | შინაარსზე გადასვლა | Skip to content |
 | 13 | დამოუკიდებელი ექსპერტიზა. გააზრებული ტექნიკური გადაწყვეტილებები. | Independent expertise. Thoughtful engineering. |
 | 14 | მცირე გუნდები. გამართული სისტემები. | SMALL TEAMS. SMOOTHER SYSTEMS. |
-| 15 | ნაკლები ხელით სამუშაო. | Less manual work. |
+| 15 | ნაკლები მანუალური სამუშაო. | Less manual work. |
 | 16 | მეტი წინსვლა. | More forward motion. |
 | 17 | თქვენი გუნდის დრო ღირებულ საქმეს უნდა ეთმობოდეს. დაგეხმარებით რუტინის ავტომატიზაციაში, ინფრასტრუქტურის გამარტივებასა და ცვლილებების საიმედოდ დანერგვაში. | Your team has better things to build. I help you automate the busywork, simplify infrastructure, and ship with confidence. |
 | 18 | გავამარტივოთ თქვენი სისტემები | Let’s simplify your setup |
-| 19 | ნახეთ სერვისები | Explore services |
+| 19 | გადახედეთ სერვისებს | Explore services |
 | 20 | ალექსანდრე ღვინერია | Aleksandre Ghvineria |
 | 21 | დამოუკიდებელი DevOps კონსულტანტი | Independent DevOps consultant |
 | 22 | გამართული პროცესები - თავიდან ბოლომდე | LESS FRICTION, FROM END TO END |
@@ -31,8 +31,8 @@ Georgian is served at /, English at /en/. Product names stay unchanged.
 | 24 | CI/CD | CI/CD |
 | 25 | უსაფრთხოება | Security |
 | 26 | ინფრასტრუქტურა | Infrastructure |
-| 27 | რაში დაგეხმარებით | WHAT I CAN HELP WITH |
-| 28 | გამართული სისტემები ახალი იდეებისთვის დროს გიტოვებთ. | Good systems give you room to build. |
+| 27 | ჩემი როლი | WHAT I CAN HELP WITH |
+| 28 | გამართული სისტემები დროს გაძლევთ ახალ იდეებზე სამუშაოდ. | Good systems give you room to build. |
 | 29 | პრაქტიკული ტექნიკური დახმარება იქ, სადაც თქვენი გუნდი დროს კარგავს - ცალკეული პროცესიდან მის უკან მდგომ ინფრასტრუქტურამდე. | Practical engineering support for the things that slow your team down. From a single workflow to the infrastructure behind it. |
 | 30 | პროცესების ავტომატიზაცია | Workflow automation |
 | 31 | განმეორებადი საქმე ავტომატურად შესრულდეს. | Make the repetitive automatic. |

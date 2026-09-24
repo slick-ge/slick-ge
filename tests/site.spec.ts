@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import georgian from '../src/i18n/ka.json' with { type: 'json' };
 
 test('landing page is accessible, responsive, and functional', async ({ page, isMobile }) => {
   const errors: string[] = [];
@@ -43,7 +44,7 @@ test('content remains navigable without JavaScript', async ({ browser }) => {
 test('Georgian is the default and switching language preserves the section', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'ka');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('ნაკლები ხელით სამუშაო.');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(georgian['Less manual work.']);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slick.ge/');
   await expect(page.locator('link[hreflang="en"]')).toHaveAttribute('href', 'https://slick.ge/en/');
   await expect(page.getByRole('link', { name: 'ქართული', exact: true })).toHaveAttribute('aria-current', 'page');
