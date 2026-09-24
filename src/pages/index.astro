@@ -1,4 +1,4 @@
 ---
-import LandingPage from "../components/LandingPage.astro";
+import { localePath } from '../i18n';
+return Astro.redirect(localePath('ka'), 301);
 ---
-<LandingPage locale="ka" />

@@ -43,9 +43,10 @@ test('content remains navigable without JavaScript', async ({ browser }) => {
 
 test('Georgian is the default and switching language preserves the section', async ({ page }) => {
   await page.goto('/');
+  await expect(page).toHaveURL('/ka/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'ka');
   await expect(page.getByRole('heading', { level: 1 })).toContainText(georgian['Less manual work.']);
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slick.ge/');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slick.ge/ka/');
   await expect(page.locator('link[hreflang="en"]')).toHaveAttribute('href', 'https://slick.ge/en/');
   await expect(page.getByRole('link', { name: 'ქართული', exact: true })).toHaveAttribute('aria-current', 'page');
   for (const width of [320, 390, 768, 1024, 1440]) {
@@ -54,12 +55,12 @@ test('Georgian is the default and switching language preserves the section', asy
   }
   const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
   expect(results.violations).toEqual([]);
-  await page.goto('/#about');
+  await page.goto('/ka/#about');
   await page.getByRole('link', { name: 'English', exact: true }).click();
   await expect(page).toHaveURL('/en/#about');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await page.getByRole('link', { name: 'ქართული', exact: true }).click();
-  await expect(page).toHaveURL('/#about');
+  await expect(page).toHaveURL('/ka/#about');
   await page.goto('/');
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 1440, height: 1000 });
@@ -76,5 +77,6 @@ test('language switching works without JavaScript', async ({ browser }) => {
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await page.getByRole('link', { name: 'ქართული', exact: true }).click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'ka');
+  await expect(page).toHaveURL('http://127.0.0.1:4321/ka/');
   await context.close();
 });

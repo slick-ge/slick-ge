@@ -11,5 +11,5 @@ export function translator(locale: Locale) {
 }
 export function localePath(locale: Locale) {
   const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-  return locale === 'ka' ? base : `${base}en/`;
+  return `${base}${locale}/`;
 }
