@@ -50,7 +50,7 @@ Pushes to main also deploy the static site to GitHub Pages with `slick.ge` as it
 
 ## Languages and translation review
 
-Georgian is at `/ka/`; English is at `/en/`. The root `/` redirects to `/ka/`. The header switcher uses ordinary links, with optional JavaScript to preserve the current section. Each version has its own canonical URL, language metadata, and hreflang links. Both versions use the same Astro components. Georgian uses self-hosted Noto Sans Georgian.
+English is at `/en/`; Georgian is at `/ka/`. The root `/` redirects to `/en/`. The header switcher uses ordinary links, with optional JavaScript to preserve the current section. Each version has its own canonical URL, language metadata, and hreflang links. Both versions use the same Astro components. Georgian uses self-hosted Noto Sans Georgian.
 
 During `npm run dev`, open `/translations` for the full Georgian/English side-by-side review. That route is excluded from production builds. Run `npm run translations:review` after editing translations to refresh `docs/translations.md`. Missing Georgian translations fail the build rather than silently showing English.
 

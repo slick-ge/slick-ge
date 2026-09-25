@@ -14,3 +14,67 @@ const t = translator(Astro.props.locale);
   <div class="pipeline-node node-deploy surface-small"><span class="node-icon"><Icon name="diagonal" size={19} /></span><div><small>{t("04 / RELEASE")}</small><strong>{t("Deploy")}</strong></div><span class="node-dot"></span></div>
   <div class="pipeline-caption"><span></span>{t("DESIGNED TO WORK TOGETHER")} <span class="observe-label">{t("/ 05 OBSERVE")}</span></div>
 </div>
+<script>
+  const pipeline = document.querySelector<HTMLElement>('.pipeline-visual');
+  const nodes = pipeline ? [...pipeline.querySelectorAll<HTMLElement>('.pipeline-node')] : [];
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let frame = 0;
+  let interactionAngle = 0;
+  let dragging = false;
+  let lastPointerX = 0;
+  let basePositions: Array<{ x: number; y: number }> = [];
+  const captureBasePositions = () => {
+    if (!pipeline) return;
+    nodes.forEach(node => {
+      node.style.setProperty('--orbit-x', '0px');
+      node.style.setProperty('--orbit-y', '0px');
+    });
+    const center = pipeline.getBoundingClientRect();
+    const centerX = center.left + center.width / 2;
+    const centerY = center.top + center.height / 2;
+    basePositions = nodes.map(node => {
+      const rect = node.getBoundingClientRect();
+      return { x: rect.left + rect.width / 2 - centerX, y: rect.top + rect.height / 2 - centerY };
+    });
+  };
+  const updateOrbit = () => {
+    frame = 0;
+    if (!pipeline || reducedMotion.matches) return;
+    const orbitAngle = (window.scrollY * 0.004) + interactionAngle;
+    if (basePositions.length !== nodes.length) captureBasePositions();
+    basePositions.forEach((position, index) => {
+      const x = position.x * Math.cos(orbitAngle) - position.y * Math.sin(orbitAngle);
+      const y = position.x * Math.sin(orbitAngle) + position.y * Math.cos(orbitAngle);
+      nodes[index].style.setProperty('--orbit-x', `${x - position.x}px`);
+      nodes[index].style.setProperty('--orbit-y', `${y - position.y}px`);
+    });
+  };
+  const requestOrbitUpdate = () => {
+    if (!frame) frame = requestAnimationFrame(updateOrbit);
+  };
+  window.addEventListener('scroll', requestOrbitUpdate, { passive: true });
+  reducedMotion.addEventListener('change', requestOrbitUpdate);
+  window.addEventListener('resize', () => { basePositions = []; requestOrbitUpdate(); });
+  pipeline?.addEventListener('pointerdown', event => {
+    if (reducedMotion.matches) return;
+    dragging = true;
+    lastPointerX = event.clientX;
+    pipeline.setPointerCapture(event.pointerId);
+    pipeline.dataset.dragging = 'true';
+  });
+  pipeline?.addEventListener('pointermove', event => {
+    if (!dragging) return;
+    interactionAngle += (event.clientX - lastPointerX) * 0.012;
+    lastPointerX = event.clientX;
+    requestOrbitUpdate();
+  });
+  const stopDragging = (event: PointerEvent) => {
+    if (!dragging) return;
+    dragging = false;
+    pipeline?.releasePointerCapture(event.pointerId);
+    if (pipeline) delete pipeline.dataset.dragging;
+  };
+  pipeline?.addEventListener('pointerup', stopDragging);
+  pipeline?.addEventListener('pointercancel', stopDragging);
+  requestOrbitUpdate();
+</script>

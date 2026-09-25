@@ -4,7 +4,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import { translator, localePath, type Locale } from '../i18n';
 interface Props { locale?: Locale; title?: string; description?: string; alternates?: boolean; }
-const { locale = 'ka', alternates = true } = Astro.props;
+const { locale = 'en', alternates = true } = Astro.props;
 const t = translator(locale);
 const { title = t('Slick - DevOps & automation for small software teams'), description = t('I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure.') } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -22,7 +22,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     {alternates && <>
       <link rel="alternate" hreflang="ka" href={new URL(localePath('ka'), Astro.site)} />
       <link rel="alternate" hreflang="en" href={new URL(localePath('en'), Astro.site)} />
-      <link rel="alternate" hreflang="x-default" href={new URL(localePath('ka'), Astro.site)} />
+      <link rel="alternate" hreflang="x-default" href={new URL(localePath('en'), Astro.site)} />
     </>}
     <meta property="og:locale" content={locale === 'ka' ? 'ka_GE' : 'en_US'} />
     <meta property="og:locale:alternate" content={locale === 'ka' ? 'en_US' : 'ka_GE'} />
@@ -36,6 +36,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <a class="skip-link button" href="#main">{t("Skip to content")}</a>
     <Header locale={locale} />
     <main id="main"><slot /></main>
-    <footer class="container site-footer"><a class="wordmark" href={localePath(locale)} aria-label={t("Slick home")}>slick<span>.</span></a><p>{t("Independent expertise. Thoughtful engineering.")}</p><span>© {new Date().getFullYear()} Slick</span></footer>
+    <footer class="container site-footer"><a class="wordmark" href={localePath(locale)} aria-label={t("Slick home")}>slick<span>.</span></a><p>{t("Independent expertise. Thoughtful engineering.")}</p><nav class="footer-links" aria-label={t("Find me elsewhere")}><span>{t("Find me elsewhere")}</span><a href="https://github.com/ghvinerias" rel="me">GitHub</a><a href="https://linkedin.com/in/aleksandre-ghvineria" rel="me">LinkedIn</a><a href="https://cv.ghvineria.com">{t("Full CV")}</a></nav><span>© {new Date().getFullYear()} Slick</span></footer>
   </body>
 </html>
