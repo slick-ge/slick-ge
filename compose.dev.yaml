@@ -1,0 +1,22 @@
+services:
+  web:
+    image: slick-ge-dev
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dev
+    ports:
+      - "4321:4321"
+    environment:
+      NODE_ENV: development
+      ASTRO_TELEMETRY_DISABLED: "1"
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - .:/app
+      - dev_node_modules:/app/node_modules
+      - dev_astro:/app/.astro
+    stdin_open: true
+    tty: true
+
+volumes:
+  dev_node_modules:
+  dev_astro:

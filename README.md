@@ -13,6 +13,8 @@ npm run dev
 
 Open http://localhost:4321. Shared page sections live in `src/components/LandingPage.astro`, tools and service copy in `src/data/site.ts`, and Georgian translations in `src/i18n/ka.json`. Design tokens live in `src/styles/tokens.css`.
 
+For a live-reloading Docker development server, run `docker compose -f compose.dev.yaml up --build` and open http://localhost:4321. The repository is mounted into the container, so edits reload automatically. Stop it with `docker compose -f compose.dev.yaml down`.
+
 ## Validate
 
 ```sh

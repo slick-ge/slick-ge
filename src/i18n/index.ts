@@ -1,12 +1,13 @@
-import georgian from './ka.json';
+import content from './content.json';
 export type Locale = 'ka' | 'en';
-export const translations: Record<string, string> = georgian;
+export type ContentEntry = (typeof content)[number];
+export { content };
+export const translations = Object.fromEntries(content.map(entry => [entry.id, entry])) as Record<string, ContentEntry>;
 export function translator(locale: Locale) {
-  return (english: string): string => {
-    if (locale === 'en') return english;
-    const translated = translations[english];
-    if (translated === undefined) throw new Error(`Missing Georgian translation: ${english}`);
-    return translated;
+  return (id: string): string => {
+    const entry = translations[id];
+    if (!entry) throw new Error(`Missing translation entry: ${id}`);
+    return entry[locale];
   };
 }
 export function localePath(locale: Locale) {

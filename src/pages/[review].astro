@@ -1,7 +1,7 @@
 ---
 import Fonts from '../components/Fonts.astro';
 import '../styles/global.css';
-import { translations, localePath } from '../i18n';
+import { content, localePath } from '../i18n';
 // A development-only review page: no review route is emitted by astro build.
 export function getStaticPaths() {
   return import.meta.env.DEV ? [{ params: { review: 'translations' } }] : [];
@@ -16,7 +16,7 @@ export function getStaticPaths() {
       <p>Both columns come from the same translation dictionary used by the website. Product names remain unchanged. Send corrections using the row number or English phrase.</p>
       <div class="hero-actions"><a class="button" href={localePath('ka')} lang="ka">ქართული ვერსია ↗</a><a class="button" href={localePath('en')}>English version ↗</a></div>
       <div class="translation-table" role="region" aria-label="Translation comparison" tabindex="0">
-        <table><caption>Website copy, metadata, and accessibility labels</caption><thead><tr><th scope="col">#</th><th scope="col">ქართული</th><th scope="col">English</th></tr></thead><tbody>{Object.entries(translations).map(([en, ka], index) => <tr><th scope="row">{index + 1}</th><td lang="ka">{ka}</td><td lang="en">{en}</td></tr>)}</tbody></table>
+        <table><caption>Website copy, metadata, and accessibility labels</caption><thead><tr><th scope="col">#</th><th scope="col">ქართული</th><th scope="col">English</th></tr></thead><tbody>{content.map((entry, index) => <tr><th scope="row">{index + 1}</th><td lang="ka">{entry.ka}</td><td lang="en">{entry.en}</td></tr>)}</tbody></table>
       </div>
     </main>
   </body>

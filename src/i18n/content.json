@@ -1,0 +1,642 @@
+[
+  {
+    "id": "Slick - DevOps & automation for small software teams",
+    "en": "Slick - DevOps & automation for small software teams",
+    "ka": "Slick - DevOps და ავტომატიზაცია მცირე გუნდებისთვის"
+  },
+  {
+    "id": "I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure.",
+    "en": "I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure.",
+    "ka": "ვეხმარები მცირე პროგრამულ გუნდებს პროცესების ავტომატიზაციაში, CI/CD-ის გაუმჯობესებაში, კოდის უსაფრთხოების გაძლიერებასა და ინფრასტრუქტურის გამარტივებაში."
+  },
+  {
+    "id": "Slick home",
+    "en": "Slick home",
+    "ka": "Slick - მთავარი გვერდი"
+  },
+  {
+    "id": "Open navigation",
+    "en": "Open navigation",
+    "ka": "მენიუს გახსნა"
+  },
+  {
+    "id": "Close navigation",
+    "en": "Close navigation",
+    "ka": "მენიუს დახურვა"
+  },
+  {
+    "id": "Main navigation",
+    "en": "Main navigation",
+    "ka": "მთავარი მენიუ"
+  },
+  {
+    "id": "Services",
+    "en": "Services",
+    "ka": "სერვისები"
+  },
+  {
+    "id": "Approach",
+    "en": "Approach",
+    "ka": "მიდგომა"
+  },
+  {
+    "id": "Toolkit",
+    "en": "Toolkit",
+    "ka": "ინსტრუმენტები"
+  },
+  {
+    "id": "About",
+    "en": "About",
+    "ka": "ჩემს შესახებ"
+  },
+  {
+    "id": "Let’s talk",
+    "en": "Let’s talk",
+    "ka": "მომწერეთ"
+  },
+  {
+    "id": "Skip to content",
+    "en": "Skip to content",
+    "ka": "შინაარსზე გადასვლა"
+  },
+  {
+    "id": "Independent expertise. Thoughtful engineering.",
+    "en": "Independent expertise. Thoughtful engineering.",
+    "ka": "დამოუკიდებელი ექსპერტიზა. გააზრებული ინჟინერია."
+  },
+  {
+    "id": "SMALL TEAMS. SMOOTHER SYSTEMS.",
+    "en": "SMALL TEAMS. SMOOTHER SYSTEMS.",
+    "ka": "მცირე გუნდები. გამართული სისტემები."
+  },
+  {
+    "id": "Less manual work.",
+    "en": "Less manual work.",
+    "ka": "ნაკლები რუტინა."
+  },
+  {
+    "id": "More forward motion.",
+    "en": "More forward motion.",
+    "ka": "მეტი წინსვლა."
+  },
+  {
+    "id": "Your team has better things to build. I help you automate the busywork, simplify infrastructure, and ship with confidence.",
+    "en": "Your team has better things to build. I help you automate the busywork, simplify infrastructure, and ship with confidence.",
+    "ka": "თქვენს გუნდს შესაქმნელი ბევრი რამ აქვს. დაგეხმარებით რუტინის ავტომატიზაციაში, ინფრასტრუქტურის გამარტივებასა და რელიზების თავდაჯერებულად გაშვებაში."
+  },
+  {
+    "id": "Let’s simplify your setup",
+    "en": "Let’s simplify your setup",
+    "ka": "გავამარტივოთ თქვენი სისტემები"
+  },
+  {
+    "id": "Explore services",
+    "en": "Explore services",
+    "ka": "გადახედეთ სერვისებს"
+  },
+  {
+    "id": "Aleksandre Ghvineria",
+    "en": "Aleksandre Ghvineria",
+    "ka": "ალექსანდრე ღვინერია"
+  },
+  {
+    "id": "Independent DevOps consultant",
+    "en": "Independent DevOps consultant",
+    "ka": "დამოუკიდებელი DevOps კონსულტანტი"
+  },
+  {
+    "id": "LESS FRICTION, FROM END TO END",
+    "en": "LESS FRICTION, FROM END TO END",
+    "ka": "ნაკლები შეფერხება - თავიდან ბოლომდე"
+  },
+  {
+    "id": "Automation",
+    "en": "Automation",
+    "ka": "ავტომატიზაცია"
+  },
+  {
+    "id": "CI/CD",
+    "en": "CI/CD",
+    "ka": "CI/CD"
+  },
+  {
+    "id": "Security",
+    "en": "Security",
+    "ka": "უსაფრთხოება"
+  },
+  {
+    "id": "Infrastructure",
+    "en": "Infrastructure",
+    "ka": "ინფრასტრუქტურა"
+  },
+  {
+    "id": "WHAT I CAN HELP WITH",
+    "en": "WHAT I CAN HELP WITH",
+    "ka": "რაში დაგეხმარებით"
+  },
+  {
+    "id": "Good systems give you room to build.",
+    "en": "Good systems give you room to build.",
+    "ka": "კარგი სისტემა ახალი რამის შექმნის საშუალებას გაძლევთ."
+  },
+  {
+    "id": "Practical engineering support for the things that slow your team down. From a single workflow to the infrastructure behind it.",
+    "en": "Practical engineering support for the things that slow your team down. From a single workflow to the infrastructure behind it.",
+    "ka": "პრაქტიკული ინჟინრული დახმარება იქ, სადაც გუნდი დროს კარგავს - ერთი პროცესიდან მის უკან მდგომ ინფრასტრუქტურამდე."
+  },
+  {
+    "id": "Workflow automation",
+    "en": "Workflow automation",
+    "ka": "პროცესების ავტომატიზაცია"
+  },
+  {
+    "id": "Make the repetitive automatic.",
+    "en": "Make the repetitive automatic.",
+    "ka": "რაც მეორდება, ავტომატურად შესრულდეს."
+  },
+  {
+    "id": "Connect your tools and turn recurring tasks into dependable workflows. Less copying, clicking, and chasing things down.",
+    "en": "Connect your tools and turn recurring tasks into dependable workflows. Less copying, clicking, and chasing things down.",
+    "ka": "დააკავშირეთ თქვენი ინსტრუმენტები და განმეორებადი ამოცანები საიმედო, ავტომატურ პროცესებად აქციეთ. ნაკლები კოპირება, კლიკები და ინფორმაციის ძებნა."
+  },
+  {
+    "id": "Integrations",
+    "en": "Integrations",
+    "ka": "ინტეგრაციები"
+  },
+  {
+    "id": "Custom tooling",
+    "en": "Custom tooling",
+    "ka": "მორგებული ხელსაწყოები"
+  },
+  {
+    "id": "Automated operations",
+    "en": "Automated operations",
+    "ka": "ოპერაციების ავტომატიზაცია"
+  },
+  {
+    "id": "CI/CD & delivery",
+    "en": "CI/CD & delivery",
+    "ka": "CI/CD და მიწოდება"
+  },
+  {
+    "id": "A clearer path to production.",
+    "en": "A clearer path to production.",
+    "ka": "გასაგები გზა კოდიდან პროდაქშენამდე."
+  },
+  {
+    "id": "Build pipelines your team can trust, with useful feedback, repeatable releases, and fewer manual steps between commit and deploy.",
+    "en": "Build pipelines your team can trust, with useful feedback, repeatable releases, and fewer manual steps between commit and deploy.",
+    "ka": "ააწყვეთ პაიფლაინები, რომლებსაც გუნდი ენდობა: სასარგებლო უკუკავშირით, განმეორებადი რელიზებით და ხელით შესასრულებელი ნაკლები ნაბიჯით კომიტიდან გაშვებამდე."
+  },
+  {
+    "id": "Build pipelines",
+    "en": "Build pipelines",
+    "ka": "აგების პაიფლაინები"
+  },
+  {
+    "id": "Release automation",
+    "en": "Release automation",
+    "ka": "რელიზების ავტომატიზაცია"
+  },
+  {
+    "id": "GitOps",
+    "en": "GitOps",
+    "ka": "GitOps"
+  },
+  {
+    "id": "Code & secrets security",
+    "en": "Code & secrets security",
+    "ka": "კოდისა და საიდუმლო მონაცემების უსაფრთხოება"
+  },
+  {
+    "id": "Bring security into the workflow.",
+    "en": "Bring security into the workflow.",
+    "ka": "უსაფრთხოება სამუშაო პროცესის ბუნებრივი ნაწილი გახდეს."
+  },
+  {
+    "id": "Catch vulnerable code, exposed secrets, and risky dependencies earlier. Put practical security checks where your developers already work.",
+    "en": "Catch vulnerable code, exposed secrets, and risky dependencies earlier. Put practical security checks where your developers already work.",
+    "ka": "ადრევე აღმოაჩინეთ დაუცველი კოდი, გაჟონილი საიდუმლო მონაცემები და სარისკო დამოკიდებულებები. უსაფრთხოების შემოწმებები იქ ჩართეთ, სადაც დეველოპერები უკვე მუშაობენ."
+  },
+  {
+    "id": "GitHub Advanced Security",
+    "en": "GitHub Advanced Security",
+    "ka": "GitHub Advanced Security"
+  },
+  {
+    "id": "Secret management",
+    "en": "Secret management",
+    "ka": "საიდუმლო მონაცემების მართვა"
+  },
+  {
+    "id": "Cloud & infrastructure",
+    "en": "Cloud & infrastructure",
+    "ka": "ღრუბელი და ინფრასტრუქტურა"
+  },
+  {
+    "id": "Infrastructure you can reason about.",
+    "en": "Infrastructure you can reason about.",
+    "ka": "ინფრასტრუქტურა, რომელშიც გაერკვევით."
+  },
+  {
+    "id": "Simplify your environments, find wasted resources, and move manual configuration into versioned, repeatable infrastructure as code.",
+    "en": "Simplify your environments, find wasted resources, and move manual configuration into versioned, repeatable infrastructure as code.",
+    "ka": "გაამარტივეთ გარემოები, იპოვეთ ტყუილად დახარჯული რესურსები და ხელით კონფიგურაცია გადაიტანეთ ვერსიებით მართულ, განმეორებად ინფრასტრუქტურა-კოდში."
+  },
+  {
+    "id": "Infrastructure as code",
+    "en": "Infrastructure as code",
+    "ka": "ინფრასტრუქტურა კოდის სახით"
+  },
+  {
+    "id": "Cloud & on-prem",
+    "en": "Cloud & on-prem",
+    "ka": "ღრუბელი და საკუთარი სერვერები"
+  },
+  {
+    "id": "Containers",
+    "en": "Containers",
+    "ka": "კონტეინერები"
+  },
+  {
+    "id": "How I work",
+    "en": "How I work",
+    "ka": "როგორ ვმუშაობ"
+  },
+  {
+    "id": "HOW WE GET THERE",
+    "en": "HOW WE GET THERE",
+    "ka": "გზა შედეგამდე"
+  },
+  {
+    "id": "Clear steps. Shared understanding.",
+    "en": "Clear steps. Shared understanding.",
+    "ka": "მკაფიო ნაბიჯები. საერთო ხედვა."
+  },
+  {
+    "id": "You work directly with me, from the first conversation to the final handover.",
+    "en": "You work directly with me, from the first conversation to the final handover.",
+    "ka": "პირველი საუბრიდან ჩაბარებამდე უშუალოდ ჩემთან მუშაობთ."
+  },
+  {
+    "id": "Understand",
+    "en": "Understand",
+    "ka": "გავერკვეთ"
+  },
+  {
+    "id": "We start with your team, your setup, and what is getting in the way.",
+    "en": "We start with your team, your setup, and what is getting in the way.",
+    "ka": "ვიწყებთ თქვენი გუნდით, არსებული სისტემებით და იმით, რაც ხელს გიშლით."
+  },
+  {
+    "id": "Make a plan",
+    "en": "Make a plan",
+    "ka": "დავგეგმოთ"
+  },
+  {
+    "id": "Agree on a practical scope, clear priorities, and what a good result looks like.",
+    "en": "Agree on a practical scope, clear priorities, and what a good result looks like.",
+    "ka": "შევთანხმდებით რეალისტურ მოცულობაზე, პრიორიტეტებსა და იმაზე, როგორი უნდა იყოს კარგი შედეგი."
+  },
+  {
+    "id": "Build & improve",
+    "en": "Build & improve",
+    "ka": "ავაწყოთ და გავაუმჯობესოთ"
+  },
+  {
+    "id": "Implement in manageable steps, with testing and visibility along the way.",
+    "en": "Implement in manageable steps, with testing and visibility along the way.",
+    "ka": "ცვლილებებს მცირე ნაბიჯებით ვნერგავთ - ტესტირებითა და გამჭვირვალედ."
+  },
+  {
+    "id": "Hand it over",
+    "en": "Hand it over",
+    "ka": "ჩაგაბაროთ"
+  },
+  {
+    "id": "Leave you with documented systems and the knowledge to keep them running.",
+    "en": "Leave you with documented systems and the knowledge to keep them running.",
+    "ka": "დაგიტოვებთ დოკუმენტირებულ სისტემებს და ცოდნას, რომ თავად მართოთ ისინი."
+  },
+  {
+    "id": "Tools and technologies",
+    "en": "Tools and technologies",
+    "ka": "ინსტრუმენტები და ტექნოლოგიები"
+  },
+  {
+    "id": "THE TOOLKIT",
+    "en": "THE TOOLKIT",
+    "ka": "ინსტრუმენტები"
+  },
+  {
+    "id": "Your stack. A practical approach.",
+    "en": "Your stack. A practical approach.",
+    "ka": "თქვენი სტეკი. პრაქტიკული მიდგომა."
+  },
+  {
+    "id": "Cloud, on-prem, or somewhere in between. I work with the tools that fit your team and the systems you already have.",
+    "en": "Cloud, on-prem, or somewhere in between. I work with the tools that fit your team and the systems you already have.",
+    "ka": "ღრუბელი, საკუთარი სერვერები თუ ორივე ერთად - ვმუშაობ იმ ინსტრუმენტებით, რომლებიც თქვენს გუნდსა და არსებულ სისტემებს ერგება."
+  },
+  {
+    "id": "Delivery & containers",
+    "en": "Delivery & containers",
+    "ka": "მიწოდება და კონტეინერები"
+  },
+  {
+    "id": "Infrastructure & systems",
+    "en": "Infrastructure & systems",
+    "ka": "ინფრასტრუქტურა და სისტემები"
+  },
+  {
+    "id": "Security & secrets",
+    "en": "Security & secrets",
+    "ka": "უსაფრთხოება და საიდუმლო მონაცემები"
+  },
+  {
+    "id": "Observability & networking",
+    "en": "Observability & networking",
+    "ka": "მონიტორინგი და ქსელები"
+  },
+  {
+    "id": "Data & automation",
+    "en": "Data & automation",
+    "ka": "მონაცემები და ავტომატიზაცია"
+  },
+  {
+    "id": "About me",
+    "en": "About me",
+    "ka": "ჩემს შესახებ"
+  },
+  {
+    "id": "ONE PERSON. PERSONALLY INVESTED.",
+    "en": "ONE PERSON. PERSONALLY INVESTED.",
+    "ka": "ერთი ადამიანი. პირადი პასუხისმგებლობა."
+  },
+  {
+    "id": "Hi, I’m Aleksandre.",
+    "en": "Hi, I’m Aleksandre.",
+    "ka": "გამარჯობა, მე ალექსანდრე ვარ."
+  },
+  {
+    "id": "An independent DevOps and automation consultant, and the person behind Slick.",
+    "en": "An independent DevOps and automation consultant, and the person behind Slick.",
+    "ka": "დამოუკიდებელი DevOps და ავტომატიზაციის კონსულტანტი. Slick სწორედ მე ვარ."
+  },
+  {
+    "id": "I help small software teams make their day-to-day engineering work simpler. That might mean untangling a deployment pipeline, bringing infrastructure into code, or connecting tools so a repetitive task takes care of itself.",
+    "en": "I help small software teams make their day-to-day engineering work simpler. That might mean untangling a deployment pipeline, bringing infrastructure into code, or connecting tools so a repetitive task takes care of itself.",
+    "ka": "მცირე პროგრამულ გუნდებს ყოველდღიური საინჟინრო სამუშაოს გამარტივებაში ვეხმარები. ეს შეიძლება იყოს დახლართული დეპლოიმენტის პაიფლაინის მოწესრიგება, ინფრასტრუქტურის კოდით მართვაზე გადასვლა ან ინსტრუმენტების ისე დაკავშირება, რომ განმეორებადი საქმე თავისით კეთდებოდეს."
+  },
+  {
+    "id": "My approach is practical: understand the problem, choose the right tools, and leave your team with something they can confidently own.",
+    "en": "My approach is practical: understand the problem, choose the right tools, and leave your team with something they can confidently own.",
+    "ka": "ჩემი მიდგომა პრაქტიკულია: გავიგო პრობლემა, შევარჩიო შესაფერისი ინსტრუმენტები და თქვენს გუნდს დავუტოვო სისტემა, რომელსაც თავდაჯერებულად მართავს."
+  },
+  {
+    "id": "LET’S MAKE THINGS SIMPLER",
+    "en": "LET’S MAKE THINGS SIMPLER",
+    "ka": "გავამარტივოთ ერთად"
+  },
+  {
+    "id": "What’s slowing your team down?",
+    "en": "What’s slowing your team down?",
+    "ka": "რა ანელებს თქვენი გუნდის მუშაობას?"
+  },
+  {
+    "id": "A stubborn pipeline? Too many manual steps? A setup that’s getting hard to manage? Tell me what you’re working with.",
+    "en": "A stubborn pipeline? Too many manual steps? A setup that’s getting hard to manage? Tell me what you’re working with.",
+    "ka": "ჯიუტი პაიფლაინი? ბევრი ხელით გასაკეთებელი ნაბიჯი? სისტემა, რომლის მართვაც სულ უფრო ძნელდება? მომწერეთ, რასთან გაქვთ საქმე."
+  },
+  {
+    "id": "Let’s talk about it",
+    "en": "Let’s talk about it",
+    "ka": "მოდით, ვისაუბროთ"
+  },
+  {
+    "id": "An illustrative delivery pipeline: commit, check, build, deploy, and observe.",
+    "en": "An illustrative delivery pipeline: commit, check, build, deploy, and observe.",
+    "ka": "სქემა: კომიტი, შემოწმება, აგება, გაშვება და მონიტორინგი."
+  },
+  {
+    "id": "Less friction.",
+    "en": "Less friction.",
+    "ka": "ნაკლები შეფერხება."
+  },
+  {
+    "id": "More flow.",
+    "en": "More flow.",
+    "ka": "უწყვეტი მუშაობა."
+  },
+  {
+    "id": "01 / SOURCE",
+    "en": "01 / SOURCE",
+    "ka": "01 / კოდი"
+  },
+  {
+    "id": "Commit",
+    "en": "Commit",
+    "ka": "კომიტი"
+  },
+  {
+    "id": "02 / VALIDATE",
+    "en": "02 / VALIDATE",
+    "ka": "02 / ვალიდაცია"
+  },
+  {
+    "id": "Check",
+    "en": "Check",
+    "ka": "შემოწმება"
+  },
+  {
+    "id": "03 / PACKAGE",
+    "en": "03 / PACKAGE",
+    "ka": "03 / შეფუთვა"
+  },
+  {
+    "id": "Build",
+    "en": "Build",
+    "ka": "აგება"
+  },
+  {
+    "id": "04 / RELEASE",
+    "en": "04 / RELEASE",
+    "ka": "04 / რელიზი"
+  },
+  {
+    "id": "Deploy",
+    "en": "Deploy",
+    "ka": "გაშვება"
+  },
+  {
+    "id": "DESIGNED TO WORK TOGETHER",
+    "en": "DESIGNED TO WORK TOGETHER",
+    "ka": "ერთიან სისტემად აწყობილი"
+  },
+  {
+    "id": "/ 05 OBSERVE",
+    "en": "/ 05 OBSERVE",
+    "ka": "/ 05 მონიტორინგი"
+  },
+  {
+    "id": "Page not found - Slick",
+    "en": "Page not found - Slick",
+    "ka": "გვერდი ვერ მოიძებნა - Slick"
+  },
+  {
+    "id": "404 / A SMALL DETOUR",
+    "en": "404 / A SMALL DETOUR",
+    "ka": "404 / გზას ავცდით"
+  },
+  {
+    "id": "This path ends here.",
+    "en": "This path ends here.",
+    "ka": "აქ გზა სრულდება."
+  },
+  {
+    "id": "Let’s get you back to something useful.",
+    "en": "Let’s get you back to something useful.",
+    "ka": "დავბრუნდეთ იქ, სადაც საქმეა."
+  },
+  {
+    "id": "Back to Slick",
+    "en": "Back to Slick",
+    "ka": "Slick-ის მთავარ გვერდზე"
+  },
+  {
+    "id": "Choose language",
+    "en": "Choose language",
+    "ka": "ენის არჩევა"
+  },
+  {
+    "id": "7+ years in production infrastructure — from a 170+ VM environment at Georgia's High Council of Justice to security pipelines at EPAM Systems today.",
+    "en": "7+ years in production infrastructure — from a 170+ VM environment at Georgia's High Council of Justice to security pipelines at EPAM Systems today.",
+    "ka": "7+ წელი საწარმოო ინფრასტრუქტურაში — 170+ ვირტუალურ მანქანაზე საქართველოს იუსტიციის უმაღლეს საბჭოში მუშაობიდან დღემდე EPAM Systems-ში უსაფრთხოების პაიფლაინებზე მუშაობამდე."
+  },
+  {
+    "id": "Recent example: built a Go-based Telegram bot for automated search and download workflows, and use n8n / Node-RED for day-to-day integrations.",
+    "en": "Recent example: built a Go-based Telegram bot for automated search and download workflows, and use n8n / Node-RED for day-to-day integrations.",
+    "ka": "მაგალითი: შევქმენი Go-ზე დაწერილი Telegram ბოტი ავტომატური ძიება/ჩამოტვირთვის სამუშაო პროცესებისთვის, ასევე ვიყენებ n8n-სა და Node-RED-ს ყოველდღიური ინტეგრაციებისთვის."
+  },
+  {
+    "id": "At JSC Liberty Bank, I overhauled build, deploy, and rollback pipelines across every application — frontend and backend — including apps that had no automation at all before.",
+    "en": "At JSC Liberty Bank, I overhauled build, deploy, and rollback pipelines across every application — frontend and backend — including apps that had no automation at all before.",
+    "ka": "სს ლიბერთი ბანკში სრულად გადავაწყვე ყველა აპლიკაციის (ფრონტენდი და ბექენდი) build, deploy და rollback პაიფლაინები — მათ შორის ისეთი აპლიკაციებისთვისაც, რომლებსაც მანამდე საერთოდ არ ჰქონდათ ავტომატიზაცია."
+  },
+  {
+    "id": "Currently working hands-on with GitHub Advanced Security, CodeQL, and Mend.io in production at EPAM Systems.",
+    "en": "Currently working hands-on with GitHub Advanced Security, CodeQL, and Mend.io in production at EPAM Systems.",
+    "ka": "ამჟამად EPAM Systems-ში საწარმოო გარემოში პირდაპირ ვმუშაობ GitHub Advanced Security-თან, CodeQL-თან და Mend.io-სთან."
+  },
+  {
+    "id": "Managed and supported 170+ Windows and Linux virtual machines at Georgia's High Council of Justice, and run a full Proxmox/Kubernetes/Ansible homelab in my own time.",
+    "en": "Managed and supported 170+ Windows and Linux virtual machines at Georgia's High Council of Justice, and run a full Proxmox/Kubernetes/Ansible homelab in my own time.",
+    "ka": "საქართველოს იუსტიციის უმაღლეს საბჭოში ვმართავდი და ვუზრუნველყოფდი 170+ Windows და Linux ვირტუალურ მანქანას, ასევე პირადად ვმართავ სრულფასოვან Proxmox/Kubernetes/Ansible ჰომლაბს."
+  },
+  {
+    "id": "Daily driver",
+    "en": "Daily driver",
+    "ka": "ყოველდღიური"
+  },
+  {
+    "id": "Also used",
+    "en": "Also used",
+    "ka": "ასევე გამოყენებული"
+  },
+  {
+    "id": "Recent work",
+    "en": "Recent work",
+    "ka": "ბოლო პროექტები"
+  },
+  {
+    "id": "RECENT WORK",
+    "en": "RECENT WORK",
+    "ka": "ბოლო პროექტები"
+  },
+  {
+    "id": "A few places where I have worked hands-on with production systems.",
+    "en": "A few places where I have worked hands-on with production systems.",
+    "ka": "რამდენიმე ადგილი, სადაც საწარმოო სისტემებზე უშუალოდ ვმუშაობდი."
+  },
+  {
+    "id": "System Engineer",
+    "en": "System Engineer",
+    "ka": "სისტემური ინჟინერი"
+  },
+  {
+    "id": "2025–present",
+    "en": "2025–present",
+    "ka": "2025–დღემდე"
+  },
+  {
+    "id": "2022–2025",
+    "en": "2022–2025",
+    "ka": "2022–2025"
+  },
+  {
+    "id": "2021–2022",
+    "en": "2021–2022",
+    "ka": "2021–2022"
+  },
+  {
+    "id": "GHAS/CodeQL/Mend.io security scanning, GCP-focused.",
+    "en": "GHAS/CodeQL/Mend.io security scanning, GCP-focused.",
+    "ka": "GHAS/CodeQL/Mend.io უსაფრთხოების სკანირება, GCP-ზე ორიენტირებული."
+  },
+  {
+    "id": "Application Server Administration",
+    "en": "Application Server Administration",
+    "ka": "აპლიკაციის სერვერების ადმინისტრირება"
+  },
+  {
+    "id": "rebuilt CI/CD and rollback pipelines for every application, frontend and backend.",
+    "en": "rebuilt CI/CD and rollback pipelines for every application, frontend and backend.",
+    "ka": "ყველა აპლიკაციის (ფრონტენდი და ბექენდი) CI/CD და rollback პაიფლაინების სრული გადაწყობა."
+  },
+  {
+    "id": "Systems Administration",
+    "en": "Systems Administration",
+    "ka": "სისტემების ადმინისტრირება"
+  },
+  {
+    "id": "High Council of Justice of Georgia",
+    "en": "High Council of Justice of Georgia",
+    "ka": "საქართველოს იუსტიციის უმაღლესი საბჭო"
+  },
+  {
+    "id": "provisioned and maintained 170+ virtual machines across Windows and Linux.",
+    "en": "provisioned and maintained 170+ virtual machines across Windows and Linux.",
+    "ka": "170+ ვირტუალური მანქანის უზრუნველყოფა და მხარდაჭერა Windows და Linux გარემოებში."
+  },
+  {
+    "id": "I'm Aleksandre, an independent DevOps and automation consultant working under the name Slick.",
+    "en": "I'm Aleksandre, an independent DevOps and automation consultant working under the name Slick.",
+    "ka": "მე ვარ ალექსანდრე, დამოუკიდებელი DevOps და ავტომატიზაციის კონსულტანტი, რომელიც მუშაობს სახელით Slick."
+  },
+  {
+    "id": "My background spans systems administration, application server administration, and DevOps: from supporting 170+ VMs at Georgia's High Council of Justice, to overhauling CI/CD pipelines for every application at JSC Liberty Bank, to my current work in security scanning and cloud infrastructure at EPAM Systems.",
+    "en": "My background spans systems administration, application server administration, and DevOps: from supporting 170+ VMs at Georgia's High Council of Justice, to overhauling CI/CD pipelines for every application at JSC Liberty Bank, to my current work in security scanning and cloud infrastructure at EPAM Systems.",
+    "ka": "ჩემი გამოცდილება მოიცავს სისტემურ ადმინისტრირებას, აპლიკაციის სერვერების ადმინისტრირებას და DevOps-ს: 170+ ვირტუალური მანქანის მხარდაჭერიდან საქართველოს იუსტიციის უმაღლეს საბჭოში, სს ლიბერთი ბანკში ყველა აპლიკაციის CI/CD პაიფლაინების სრულ გადაწყობამდე, დღეს კი — EPAM Systems-ში უსაფრთხოების სკანირებასა და ღრუბლოვან ინფრასტრუქტურაზე მუშაობამდე."
+  },
+  {
+    "id": "I hold LPIC-1 and LPIC-2 certifications from the Linux Professional Institute, and a BSc in Electrical & Computer Engineering from the Agricultural University of Tbilisi. Outside of client work, I run a full homelab (Proxmox, Kubernetes, OPNsense) and build small tools for fun — including a remote-start system for a Gen 2/3 Toyota Prius as a university project.",
+    "en": "I hold LPIC-1 and LPIC-2 certifications from the Linux Professional Institute, and a BSc in Electrical & Computer Engineering from the Agricultural University of Tbilisi. Outside of client work, I run a full homelab (Proxmox, Kubernetes, OPNsense) and build small tools for fun — including a remote-start system for a Gen 2/3 Toyota Prius as a university project.",
+    "ka": "მაქვს LPIC-1 და LPIC-2 სერტიფიკატები Linux Professional Institute-სგან და ბაკალავრის ხარისხი ელექტრო და კომპიუტერულ ინჟინერიაში თბილისის სასოფლო-სამეურნეო უნივერსიტეტიდან. სამუშაოს გარეთ ვმართავ სრულფასოვან ჰომლაბს (Proxmox, Kubernetes, OPNsense) და თავისუფალ დროს ვქმნი მცირე ხელსაწყოებს — მათ შორის, უნივერსიტეტის პროექტის ფარგლებში, დისტანციური გაშვების სისტემა Toyota Prius-ის მე-2/მე-3 თაობისთვის."
+  },
+  {
+    "id": "Currently working hands-on in production at EPAM Systems — reach out if your team needs similar support.",
+    "en": "Currently working hands-on in production at EPAM Systems — reach out if your team needs similar support.",
+    "ka": "ამჟამად პრაქტიკულად ვმუშაობ EPAM Systems-ში საწარმოო გარემოში — დამიკავშირდით, თუ თქვენს გუნდს მსგავსი მხარდაჭერა სჭირდება."
+  },
+  {
+    "id": "Find me elsewhere",
+    "en": "Find me elsewhere",
+    "ka": "სხვაგან მიპოვეთ"
+  },
+  {
+    "id": "Full CV",
+    "en": "Full CV",
+    "ka": "სრული CV"
+  }
+]
