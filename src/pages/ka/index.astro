@@ -1,4 +1,7 @@
 ---
 import LandingPage from "../../components/LandingPage.astro";
+import { ENABLE_GEORGIAN } from "../../config";
+
+if (!ENABLE_GEORGIAN) return Astro.redirect('/en/', 301);
 ---
 <LandingPage locale="ka" />

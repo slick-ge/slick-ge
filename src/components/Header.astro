@@ -1,6 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import { translator, localePath, type Locale } from '../i18n';
+import { ENABLE_GEORGIAN } from '../config';
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const t = translator(locale);
@@ -10,10 +11,10 @@ const home = localePath(locale);
   <div class="container header-inner">
     <a class="wordmark" href={home} aria-label={t("Slick home")}>slick<span>.</span></a>
     <div class="header-controls">
-      <div class="language-switch well" role="group" aria-label={t("Choose language")}>
+      {ENABLE_GEORGIAN && <div class="language-switch well" role="group" aria-label={t("Choose language")}>
         <a href={localePath('ka')} lang="ka" hreflang="ka" aria-label="ქართული" aria-current={locale === 'ka' ? 'page' : undefined}>ქარ</a>
         <a href={localePath('en')} lang="en" hreflang="en" aria-label="English" aria-current={locale === 'en' ? 'page' : undefined}>EN</a>
-      </div>
+      </div>}
     <button class="menu-toggle surface-small" aria-expanded="false" aria-controls="main-navigation" data-open-label={t("Open navigation")} data-close-label={t("Close navigation")} aria-label={t("Open navigation")} hidden><span></span><span></span></button>
     </div>
     <nav id="main-navigation" aria-label={t("Main navigation")}>
