@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:4321. Shared page sections live in `src/components/LandingPage.astro`, tools and service copy in `src/data/site.ts`, and Georgian translations in `src/i18n/ka.json`. Design tokens live in `src/styles/tokens.css`.
+Open http://localhost:4321. Shared landing sections live in `src/components/LandingPage.astro`, the dedicated CV-style profile is at `/en/about/`, tools and service copy live in `src/data/site.ts`, and localized copy is stored in `src/i18n/content.json`. Design tokens live in `src/styles/tokens.css`.
 
 For a live-reloading Docker development server, run `docker compose -f compose.dev.yaml up --build` and open http://localhost:4321. The repository is mounted into the container, so edits reload automatically. Stop it with `docker compose -f compose.dev.yaml down`.
 
@@ -52,10 +52,10 @@ Pushes to main also deploy the static site to GitHub Pages with `slick.ge` as it
 
 ## Languages and translation review
 
-English is at `/en/`; Georgian is at `/ka/`. The root `/` redirects to `/en/`. The header switcher uses ordinary links, with optional JavaScript to preserve the current section. Each version has its own canonical URL, language metadata, and hreflang links. Both versions use the same Astro components. Georgian uses self-hosted Noto Sans Georgian.
+English is at `/en/`. The root `/` redirects to `/en/`. The site uses a single English route set and self-hosted Latin fonts.
 
-During `npm run dev`, open `/translations` for the full Georgian/English side-by-side review. That route is excluded from production builds. Run `npm run translations:review` after editing translations to refresh `docs/translations.md`. Missing Georgian translations fail the build rather than silently showing English.
+Translations and locale review tooling are not part of the production site.
 
 ## Font loading
 
-`src/components/Fonts.astro` preloads the self-hosted font subsets needed by each language. `src/styles/fonts.css` uses `font-display: optional` so fonts arriving after first paint do not move visible content. On slow connections, the browser may keep the fallback font for that navigation; the downloaded font is available for subsequent visits. The browser suite delays font responses to verify stable layout in both languages on desktop and mobile.
+`src/components/Fonts.astro` preloads the self-hosted Latin font files. `src/styles/fonts.css` uses `font-display: optional` so fonts arriving after first paint do not move visible content. On slow connections, the browser may keep the fallback font for that navigation; the downloaded font is available for subsequent visits. The browser suite delays font responses to verify stable layout on desktop and mobile.

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+import { profile, cvUrl, toolGroups, toolLogo } from '../data/profile';
+import { translator, type Locale } from '../i18n';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = translator(locale);
+const data = profile[locale];
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout locale={locale} title={`${data.name} — ${t('About me')}`} description={data.summary}>
+  <section class="container profile-hero" aria-labelledby="profile-title">
+    <div class="profile-portrait surface"><img src={`${base}aleksandre-ghvineria.jpeg`} alt={data.name} width="400" height="400" /></div>
+    <div class="profile-hero-copy">
+      <p class="eyebrow"><span></span>{t('ONE PERSON. PERSONALLY INVESTED.')}</p>
+      <h1 id="profile-title">{data.name}</h1>
+      <p class="profile-role">{data.role}</p>
+      <p class="profile-summary">{data.summary}</p>
+      <div class="profile-actions"><a class="button button-primary" href={cvUrl} target="_blank" rel="noopener">Download full CV <Icon name="diagonal" size={18} /></a><a class="text-link" href={`mailto:${data.email}`}>Get in touch <Icon name="arrow" size={18} /></a></div>
+    </div>
+    <aside class="profile-contact surface-small" aria-label="Contact information"><a class="profile-contact-link" href={`mailto:${data.email}`}><Icon name="mail" />{data.email}</a><a class="profile-contact-link" href={`tel:${data.phone.replaceAll(' ', '')}`}><Icon name="phone" />{data.phone}</a><div class="profile-socials"><a href="https://github.com/ghvinerias" rel="me" aria-label="GitHub"><Icon name="github" size={19} /><span>GitHub</span></a><a href="https://linkedin.com/in/aleksandre-ghvineria" rel="me" aria-label="LinkedIn"><Icon name="linkedin" size={19} /><span>LinkedIn</span></a><a href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000523471/5lhcz7x9r5" rel="me" aria-label="Linux Professional Institute"><Icon name="lpi" size={19} /><span>LPI</span></a></div></aside>
+  </section>
+  <section class="container profile-section profile-about surface" aria-labelledby="profile-about-title"><p class="eyebrow">A PRACTICAL BACKGROUND</p><h2 id="profile-about-title">Built around real systems.</h2><p>{data.intro}</p></section>
+  <section class="container profile-section" aria-labelledby="profile-toolkit-title"><div class="section-heading"><p class="eyebrow">{t('THE TOOLKIT')}</p><h2 id="profile-toolkit-title">Tools I work with</h2></div><div class="profile-tool-groups">{toolGroups.map(group => <article class="profile-tool-group surface-small"><h3>{t(group.title)}</h3><div>{group.tools.map(tool => { const item = typeof tool === 'string' ? { name: tool } : tool; return <span class="tool-logo well" title={item.name} aria-label={item.name}><img src={toolLogo(item.name)} alt="" loading="lazy" /><b>{item.name}</b></span>; })}</div></article>)}</div></section>
+  <section class="container profile-section" aria-labelledby="profile-education-title"><div class="section-heading"><p class="eyebrow">EDUCATION & CERTIFICATIONS</p><h2 id="profile-education-title">Learning that stays useful.</h2></div><div class="profile-card-grid">{data.certifications.map(item => <article class="profile-info-card surface-small"><h3>{item[0]}</h3><p>{item[1]}</p><time>{item[2]}</time></article>)}</div></section>
+  <section class="container profile-section" aria-labelledby="profile-projects-title"><div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2 id="profile-projects-title">Things I build outside client work.</h2></div><div class="profile-card-grid">{data.projects.map(item => <article class="profile-info-card surface-small"><h3>{item[0]}</h3><p>{item[1]}</p><a class="text-link" href={item[2]} target="_blank" rel="noopener">View project <Icon name="diagonal" size={16} /></a></article>)}</div></section>
+</BaseLayout>

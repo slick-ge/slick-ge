@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { ENABLE_GEORGIAN } from '../src/config';
 
-for (const path of ENABLE_GEORGIAN ? ['/ka/', '/en/'] : ['/en/']) {
+for (const path of ['/en/']) {
   test(`late fonts do not move visible content on ${path}`, async ({ page }) => {
     // Hold every font past first paint to simulate a cold, slow connection.
     let releaseFonts!: () => void;
