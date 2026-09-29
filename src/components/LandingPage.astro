@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AboutCard from './AboutCard.astro';
 import Icon from '../components/Icon.astro';
 import ToolLogo from './ToolLogo.astro';
 import Pipeline from '../components/Pipeline.astro';
@@ -39,5 +40,6 @@ const t = translator(locale);
     <SectionHeading eyebrow={t("work.eyebrow")} title={t("work.title")} description={t("work.description")} />
     <div class="recent-work-grid">{recentWork.map(item => <article class="recent-work-item surface-small"><p class="service-label">{t(item.role)}</p><h3>{item.org} <span>· {item.period}</span></h3><p>{t(item.detail)}</p></article>)}</div>
   </section>
+  <AboutCard locale={locale} />
   <section class="container contact-section" id="contact" aria-labelledby="contact-title"><div class="contact-card surface"><span class="icon-well"><Icon name="mail" size={29} /></span><p class="eyebrow">{t("contact.eyebrow")}</p><h2 id="contact-title">{t("contact.title")}</h2><p>{t("contact.description")}</p><p class="contact-proof">{t("contact.proof")}</p><a class="button button-primary" href={`mailto:${email}`}>{t("contact.cta")} <Icon name="diagonal" size={20} /></a><a class="email-link" href={`mailto:${email}`}>{email}</a></div></section>
 </BaseLayout>

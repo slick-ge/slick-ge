@@ -382,5 +382,14 @@
   },
   "footer.cv": {
     "en": "Full CV"
+  },
+  "about.card.punchline": {
+    "en": "Good systems start with a conversation. Tell me what’s slowing your team down, and let’s make it simpler."
+  },
+  "about.card.connect": {
+    "en": "Let’s connect"
+  },
+  "about.card.profile": {
+    "en": "More about me"
   }
 }
