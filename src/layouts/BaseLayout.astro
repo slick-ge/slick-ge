@@ -1,4 +1,5 @@
 ---
+import Icon from '../components/Icon.astro';
 import Fonts from '../components/Fonts.astro';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
@@ -6,7 +7,7 @@ import { translator, localePath, type Locale } from '../i18n';
 interface Props { locale?: Locale; title?: string; description?: string; alternates?: boolean; }
 const { locale = 'en', alternates = true } = Astro.props;
 const t = translator(locale);
-const { title = t('Slick - DevOps & automation for small software teams'), description = t('I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure.') } = Astro.props;
+const { title = t('meta.title'), description = t('meta.description') } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
@@ -31,9 +32,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonical} />
   </head>
   <body>
-    <a class="skip-link button" href="#main">{t("Skip to content")}</a>
+    <a class="skip-link button" href="#main">{t("nav.skip")}</a>
     <Header locale={locale} />
     <main id="main"><slot /></main>
-    <footer class="container site-footer"><a class="wordmark" href={localePath('en')} aria-label={t("Slick home")}>slick<span>.</span></a><p>{t("Independent expertise. Thoughtful engineering.")}</p><nav class="footer-links" aria-label={t("Find me elsewhere")}><span>{t("Find me elsewhere")}</span><a href="https://github.com/ghvinerias" rel="me">GitHub</a><a href="https://linkedin.com/in/aleksandre-ghvineria" rel="me">LinkedIn</a><a href="https://cv.ghvineria.com">{t("Full CV")}</a></nav><span>© {new Date().getFullYear()} Slick</span></footer>
+    <footer class="container site-footer"><a class="wordmark" href={localePath('en')} aria-label={t("nav.home")}>slick<span>.</span></a><p>{t("footer.tagline")}</p><nav class="footer-links" aria-label={t("footer.social")}><span>{t("footer.social")}</span><a href="https://github.com/ghvinerias" rel="me"><Icon name="github" size={16} />GitHub</a><a href="https://linkedin.com/in/aleksandre-ghvineria" rel="me"><Icon name="linkedin" size={16} />LinkedIn</a><a href="https://cv.ghvineria.com">{t("footer.cv")}</a></nav><span>© {new Date().getFullYear()} Slick</span></footer>
   </body>
 </html>

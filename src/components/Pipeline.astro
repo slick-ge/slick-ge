@@ -4,15 +4,15 @@ import { translator, type Locale } from '../i18n';
 interface Props { locale: Locale; }
 const t = translator(Astro.props.locale);
 ---
-<div class="pipeline-visual" role="img" aria-label={t("An illustrative delivery pipeline: commit, check, build, deploy, and observe.")}>
+<div class="pipeline-visual" role="img" aria-label={t("pipeline.label")}>
   <div class="orbital-ring ring-outer"></div>
   <div class="orbital-ring ring-inner"></div>
-  <div class="pipeline-core surface"><div class="core-well"><Icon name="workflow" size={48} /></div><strong>{t("Less friction.")}</strong><span>{t("More flow.")}</span></div>
-  <div class="pipeline-node node-commit surface-small"><span class="node-icon"><Icon name="code" size={19} /></span><div><small>{t("01 / SOURCE")}</small><strong>{t("Commit")}</strong></div><span class="node-dot"></span></div>
-  <div class="pipeline-node node-check surface-small"><span class="node-icon"><Icon name="shield" size={19} /></span><div><small>{t("02 / VALIDATE")}</small><strong>{t("Check")}</strong></div><span class="node-dot"></span></div>
-  <div class="pipeline-node node-build surface-small"><span class="node-icon"><Icon name="layers" size={19} /></span><div><small>{t("03 / PACKAGE")}</small><strong>{t("Build")}</strong></div><span class="node-dot"></span></div>
-  <div class="pipeline-node node-deploy surface-small"><span class="node-icon"><Icon name="diagonal" size={19} /></span><div><small>{t("04 / RELEASE")}</small><strong>{t("Deploy")}</strong></div><span class="node-dot"></span></div>
-  <div class="pipeline-caption"><span></span>{t("DESIGNED TO WORK TOGETHER")} <span class="observe-label">{t("/ 05 OBSERVE")}</span></div>
+  <div class="pipeline-core surface"><div class="core-well"><Icon name="workflow" size={48} /></div><strong>{t("pipeline.title")}</strong><span>{t("pipeline.subtitle")}</span></div>
+  <div class="pipeline-node node-commit surface-small"><span class="node-icon"><Icon name="code" size={19} /></span><div><small>{t("pipeline.source.label")}</small><strong>{t("pipeline.source.title")}</strong></div><span class="node-dot"></span></div>
+  <div class="pipeline-node node-check surface-small"><span class="node-icon"><Icon name="shield" size={19} /></span><div><small>{t("pipeline.validate.label")}</small><strong>{t("pipeline.validate.title")}</strong></div><span class="node-dot"></span></div>
+  <div class="pipeline-node node-build surface-small"><span class="node-icon"><Icon name="layers" size={19} /></span><div><small>{t("pipeline.package.label")}</small><strong>{t("pipeline.package.title")}</strong></div><span class="node-dot"></span></div>
+  <div class="pipeline-node node-deploy surface-small"><span class="node-icon"><Icon name="diagonal" size={19} /></span><div><small>{t("pipeline.release.label")}</small><strong>{t("pipeline.release.title")}</strong></div><span class="node-dot"></span></div>
+  <div class="pipeline-caption"><span></span>{t("pipeline.caption")} <span class="observe-label">{t("pipeline.observe")}</span></div>
 </div>
 <script>
   const pipeline = document.querySelector<HTMLElement>('.pipeline-visual');

@@ -108,7 +108,8 @@ nav > a:hover { color: var(--accent-strong); }
 .tool-group[open] .expand-icon { transform: rotate(45deg); }
 .tool-group ul { display: flex; flex-wrap: wrap; gap: 12px; padding-bottom: 26px; }
 .tool-group li { padding: 8px 15px; border-radius: 12px; box-shadow: var(--shadow-inset-small); font-size: .75rem; }
-.tool-group li { display: inline-flex; align-items: center; gap: 8px; }
+.tool-group li { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; max-width: 100%; }
+.tool-name { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
 .tool-group li small { color: var(--muted); font-size: .58rem; white-space: nowrap; }
 .recent-work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .recent-work-item { padding: 28px; }
@@ -131,7 +132,7 @@ nav > a:hover { color: var(--accent-strong); }
 .site-footer p, .site-footer > span { font-size: .7rem; color: var(--muted); }
 .footer-links { display: flex; align-items: center; gap: 14px; width: auto; padding: 0; }
 .footer-links span { color: var(--muted); font-size: .7rem; }
-.footer-links a { font-size: .7rem; }
+.footer-links a { display: inline-flex; align-items: center; gap: 6px; font-size: .7rem; }
 .error-page { padding-block: 100px; min-height: 65vh; }
 .error-page h1, .error-page p, .error-page .button { margin-bottom: 24px; }
 @keyframes float { 0%, 100% { --float-y: 0px; } 50% { --float-y: -5px; } }
@@ -235,7 +236,6 @@ nav > a:hover { color: var(--accent-strong); }
 .profile-tool-group h3 { font-size: 1rem; }
 .profile-tool-group > div { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
 .profile-tool-group span.tool-logo { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 11px; border-radius: 12px; }
-.profile-tool-group .tool-logo img { width: 23px; height: 23px; object-fit: contain; }
 .profile-tool-group .tool-logo b { color: var(--text); font-size: .68rem; font-weight: 600; white-space: nowrap; }
 .profile-tool-group .tool-logo:hover { color: var(--accent-strong); box-shadow: var(--shadow-small); transform: translateY(-1px); }
 .profile-card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }

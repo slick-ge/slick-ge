@@ -1,11 +1,12 @@
 import content from './content.json';
 export type Locale = 'en';
-export type ContentEntry = (typeof content)[number];
+export type ContentId = keyof typeof content;
+export type ContentEntry = (typeof content)[ContentId];
 export { content };
-export const translations = Object.fromEntries(content.map(entry => [entry.id, entry])) as Record<string, ContentEntry>;
+export const translations = content;
 export function translator(_locale: Locale) {
-  return (id: string): string => {
-    const entry = translations[id];
+  return (id: ContentId): string => {
+    const entry = Object.hasOwn(translations, id) ? translations[id] : undefined;
     if (!entry) throw new Error(`Missing translation entry: ${id}`);
     return entry.en;
   };

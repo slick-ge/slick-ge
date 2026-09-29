@@ -8,14 +8,14 @@ const home = localePath(locale);
 ---
 <header class="site-header">
   <div class="container header-inner">
-    <a class="wordmark" href={home} aria-label={t("Slick home")}>slick<span>.</span></a>
-    <div class="header-controls"><button class="menu-toggle surface-small" aria-expanded="false" aria-controls="main-navigation" data-open-label={t("Open navigation")} data-close-label={t("Close navigation")} aria-label={t("Open navigation")} hidden><span></span><span></span></button></div>
-    <nav id="main-navigation" aria-label={t("Main navigation")}>
-      <a href={`${home}#services`}>{t("Services")}</a>
-      <a href={`${home}#approach`}>{t("Approach")}</a>
-      <a href={`${home}#tools`}>{t("Toolkit")}</a>
-      <a href={`${home}about/`}>{t("About")}</a>
-      <a class="button button-small" href={`${home}#contact`}>{t("Let’s talk")} <Icon name="diagonal" size={16} /></a>
+    <a class="wordmark" href={home} aria-label={t("nav.home")}>slick<span>.</span></a>
+    <div class="header-controls"><button class="menu-toggle surface-small" aria-expanded="false" aria-controls="main-navigation" data-open-label={t("nav.open")} data-close-label={t("nav.close")} aria-label={t("nav.open")} hidden><span></span><span></span></button></div>
+    <nav id="main-navigation" aria-label={t("nav.label")}>
+      <a href={`${home}#services`}>{t("nav.services")}</a>
+      <a href={`${home}#approach`}>{t("nav.approach")}</a>
+      <a href={`${home}#tools`}>{t("nav.toolkit")}</a>
+      <a href={`${home}about/`}>{t("nav.about")}</a>
+      <a class="button button-small" href={`${home}#contact`}>{t("nav.contact")} <Icon name="diagonal" size={16} /></a>
     </nav>
   </div>
 </header>

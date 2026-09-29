@@ -1,514 +1,386 @@
-[
-  {
-    "id": "Slick - DevOps & automation for small software teams",
+{
+  "meta.title": {
     "en": "Slick - DevOps & automation for small software teams"
   },
-  {
-    "id": "I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure.",
+  "meta.description": {
     "en": "I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure."
   },
-  {
-    "id": "Slick home",
+  "nav.home": {
     "en": "Slick home"
   },
-  {
-    "id": "Open navigation",
+  "nav.open": {
     "en": "Open navigation"
   },
-  {
-    "id": "Close navigation",
+  "nav.close": {
     "en": "Close navigation"
   },
-  {
-    "id": "Main navigation",
+  "nav.label": {
     "en": "Main navigation"
   },
-  {
-    "id": "Services",
+  "nav.services": {
     "en": "Services"
   },
-  {
-    "id": "Approach",
+  "nav.approach": {
     "en": "Approach"
   },
-  {
-    "id": "Toolkit",
+  "nav.toolkit": {
     "en": "Toolkit"
   },
-  {
-    "id": "About",
+  "nav.about": {
     "en": "About"
   },
-  {
-    "id": "Let’s talk",
+  "nav.contact": {
     "en": "Let’s talk"
   },
-  {
-    "id": "Skip to content",
+  "nav.skip": {
     "en": "Skip to content"
   },
-  {
-    "id": "Independent expertise. Thoughtful engineering.",
+  "footer.tagline": {
     "en": "Independent expertise. Thoughtful engineering."
   },
-  {
-    "id": "SMALL TEAMS. SMOOTHER SYSTEMS.",
+  "hero.eyebrow": {
     "en": "SMALL TEAMS. SMOOTHER SYSTEMS."
   },
-  {
-    "id": "Less manual work.",
+  "hero.title": {
     "en": "Less manual work."
   },
-  {
-    "id": "More forward motion.",
+  "hero.subtitle": {
     "en": "More forward motion."
   },
-  {
-    "id": "Your team has better things to build. I help you automate the busywork, simplify infrastructure, and ship with confidence.",
+  "hero.description": {
     "en": "Your team has better things to build. I help you automate the busywork, simplify infrastructure, and ship with confidence."
   },
-  {
-    "id": "Let’s simplify your setup",
+  "hero.cta": {
     "en": "Let’s simplify your setup"
   },
-  {
-    "id": "Explore services",
+  "hero.services": {
     "en": "Explore services"
   },
-  {
-    "id": "Aleksandre Ghvineria",
+  "profile.name": {
     "en": "Aleksandre Ghvineria"
   },
-  {
-    "id": "Independent DevOps consultant",
+  "profile.role": {
     "en": "Independent DevOps consultant"
   },
-  {
-    "id": "LESS FRICTION, FROM END TO END",
+  "specialties.title": {
     "en": "LESS FRICTION, FROM END TO END"
   },
-  {
-    "id": "Automation",
+  "specialties.automation": {
     "en": "Automation"
   },
-  {
-    "id": "CI/CD",
+  "specialties.delivery": {
     "en": "CI/CD"
   },
-  {
-    "id": "Security",
+  "specialties.security": {
     "en": "Security"
   },
-  {
-    "id": "Infrastructure",
+  "specialties.infrastructure": {
     "en": "Infrastructure"
   },
-  {
-    "id": "WHAT I CAN HELP WITH",
+  "services.eyebrow": {
     "en": "WHAT I CAN HELP WITH"
   },
-  {
-    "id": "Good systems give you room to build.",
+  "services.title": {
     "en": "Good systems give you room to build."
   },
-  {
-    "id": "Practical engineering support for the things that slow your team down. From a single workflow to the infrastructure behind it.",
+  "services.description": {
     "en": "Practical engineering support for the things that slow your team down. From a single workflow to the infrastructure behind it."
   },
-  {
-    "id": "Workflow automation",
+  "services.automation.label": {
     "en": "Workflow automation"
   },
-  {
-    "id": "Make the repetitive automatic.",
+  "services.automation.title": {
     "en": "Make the repetitive automatic."
   },
-  {
-    "id": "Connect your tools and turn recurring tasks into dependable workflows. Less copying, clicking, and chasing things down.",
+  "services.automation.description": {
     "en": "Connect your tools and turn recurring tasks into dependable workflows. Less copying, clicking, and chasing things down."
   },
-  {
-    "id": "Integrations",
+  "tags.integrations": {
     "en": "Integrations"
   },
-  {
-    "id": "Custom tooling",
+  "tags.tooling": {
     "en": "Custom tooling"
   },
-  {
-    "id": "Automated operations",
+  "tags.operations": {
     "en": "Automated operations"
   },
-  {
-    "id": "CI/CD & delivery",
+  "services.delivery.label": {
     "en": "CI/CD & delivery"
   },
-  {
-    "id": "A clearer path to production.",
+  "services.delivery.title": {
     "en": "A clearer path to production."
   },
-  {
-    "id": "Build pipelines your team can trust, with useful feedback, repeatable releases, and fewer manual steps between commit and deploy.",
+  "services.delivery.description": {
     "en": "Build pipelines your team can trust, with useful feedback, repeatable releases, and fewer manual steps between commit and deploy."
   },
-  {
-    "id": "Build pipelines",
+  "tags.pipelines": {
     "en": "Build pipelines"
   },
-  {
-    "id": "Release automation",
+  "tags.releases": {
     "en": "Release automation"
   },
-  {
-    "id": "GitOps",
+  "tags.gitops": {
     "en": "GitOps"
   },
-  {
-    "id": "Code & secrets security",
+  "services.security.label": {
     "en": "Code & secrets security"
   },
-  {
-    "id": "Bring security into the workflow.",
+  "services.security.title": {
     "en": "Bring security into the workflow."
   },
-  {
-    "id": "Catch vulnerable code, exposed secrets, and risky dependencies earlier. Put practical security checks where your developers already work.",
+  "services.security.description": {
     "en": "Catch vulnerable code, exposed secrets, and risky dependencies earlier. Put practical security checks where your developers already work."
   },
-  {
-    "id": "GitHub Advanced Security",
+  "tags.ghas": {
     "en": "GitHub Advanced Security"
   },
-  {
-    "id": "Secret management",
+  "tags.secrets": {
     "en": "Secret management"
   },
-  {
-    "id": "Cloud & infrastructure",
+  "services.infrastructure.label": {
     "en": "Cloud & infrastructure"
   },
-  {
-    "id": "Infrastructure you can reason about.",
+  "services.infrastructure.title": {
     "en": "Infrastructure you can reason about."
   },
-  {
-    "id": "Simplify your environments, find wasted resources, and move manual configuration into versioned, repeatable infrastructure as code.",
+  "services.infrastructure.description": {
     "en": "Simplify your environments, find wasted resources, and move manual configuration into versioned, repeatable infrastructure as code."
   },
-  {
-    "id": "Infrastructure as code",
+  "tags.iac": {
     "en": "Infrastructure as code"
   },
-  {
-    "id": "Cloud & on-prem",
+  "tags.cloud": {
     "en": "Cloud & on-prem"
   },
-  {
-    "id": "Containers",
+  "tags.containers": {
     "en": "Containers"
   },
-  {
-    "id": "How I work",
+  "approach.label": {
     "en": "How I work"
   },
-  {
-    "id": "HOW WE GET THERE",
+  "approach.eyebrow": {
     "en": "HOW WE GET THERE"
   },
-  {
-    "id": "Clear steps. Shared understanding.",
+  "approach.title": {
     "en": "Clear steps. Shared understanding."
   },
-  {
-    "id": "You work directly with me, from the first conversation to the final handover.",
+  "approach.description": {
     "en": "You work directly with me, from the first conversation to the final handover."
   },
-  {
-    "id": "Understand",
+  "approach.understand.title": {
     "en": "Understand"
   },
-  {
-    "id": "We start with your team, your setup, and what is getting in the way.",
+  "approach.understand.description": {
     "en": "We start with your team, your setup, and what is getting in the way."
   },
-  {
-    "id": "Make a plan",
+  "approach.plan.title": {
     "en": "Make a plan"
   },
-  {
-    "id": "Agree on a practical scope, clear priorities, and what a good result looks like.",
+  "approach.plan.description": {
     "en": "Agree on a practical scope, clear priorities, and what a good result looks like."
   },
-  {
-    "id": "Build & improve",
+  "approach.build.title": {
     "en": "Build & improve"
   },
-  {
-    "id": "Implement in manageable steps, with testing and visibility along the way.",
+  "approach.build.description": {
     "en": "Implement in manageable steps, with testing and visibility along the way."
   },
-  {
-    "id": "Hand it over",
+  "approach.handover.title": {
     "en": "Hand it over"
   },
-  {
-    "id": "Leave you with documented systems and the knowledge to keep them running.",
+  "approach.handover.description": {
     "en": "Leave you with documented systems and the knowledge to keep them running."
   },
-  {
-    "id": "Tools and technologies",
+  "toolkit.label": {
     "en": "Tools and technologies"
   },
-  {
-    "id": "THE TOOLKIT",
+  "toolkit.eyebrow": {
     "en": "THE TOOLKIT"
   },
-  {
-    "id": "Your stack. A practical approach.",
+  "toolkit.title": {
     "en": "Your stack. A practical approach."
   },
-  {
-    "id": "Cloud, on-prem, or somewhere in between. I work with the tools that fit your team and the systems you already have.",
+  "toolkit.description": {
     "en": "Cloud, on-prem, or somewhere in between. I work with the tools that fit your team and the systems you already have."
   },
-  {
-    "id": "Delivery & containers",
+  "toolkit.delivery": {
     "en": "Delivery & containers"
   },
-  {
-    "id": "Infrastructure & systems",
+  "toolkit.infrastructure": {
     "en": "Infrastructure & systems"
   },
-  {
-    "id": "Security & secrets",
+  "toolkit.security": {
     "en": "Security & secrets"
   },
-  {
-    "id": "Observability & networking",
+  "toolkit.observability": {
     "en": "Observability & networking"
   },
-  {
-    "id": "Data & automation",
+  "toolkit.automation": {
     "en": "Data & automation"
   },
-  {
-    "id": "About me",
+  "about.label": {
     "en": "About me"
   },
-  {
-    "id": "ONE PERSON. PERSONALLY INVESTED.",
+  "about.eyebrow": {
     "en": "ONE PERSON. PERSONALLY INVESTED."
   },
-  {
-    "id": "Hi, I’m Aleksandre.",
+  "about.title": {
     "en": "Hi, I’m Aleksandre."
   },
-  {
-    "id": "An independent DevOps and automation consultant, and the person behind Slick.",
+  "about.subtitle": {
     "en": "An independent DevOps and automation consultant, and the person behind Slick."
   },
-  {
-    "id": "I help small software teams make their day-to-day engineering work simpler. That might mean untangling a deployment pipeline, bringing infrastructure into code, or connecting tools so a repetitive task takes care of itself.",
+  "about.description": {
     "en": "I help small software teams make their day-to-day engineering work simpler. That might mean untangling a deployment pipeline, bringing infrastructure into code, or connecting tools so a repetitive task takes care of itself."
   },
-  {
-    "id": "My approach is practical: understand the problem, choose the right tools, and leave your team with something they can confidently own.",
+  "about.approach": {
     "en": "My approach is practical: understand the problem, choose the right tools, and leave your team with something they can confidently own."
   },
-  {
-    "id": "LET’S MAKE THINGS SIMPLER",
+  "contact.eyebrow": {
     "en": "LET’S MAKE THINGS SIMPLER"
   },
-  {
-    "id": "What’s slowing your team down?",
+  "contact.title": {
     "en": "What’s slowing your team down?"
   },
-  {
-    "id": "A stubborn pipeline? Too many manual steps? A setup that’s getting hard to manage? Tell me what you’re working with.",
+  "contact.description": {
     "en": "A stubborn pipeline? Too many manual steps? A setup that’s getting hard to manage? Tell me what you’re working with."
   },
-  {
-    "id": "Let’s talk about it",
+  "contact.cta": {
     "en": "Let’s talk about it"
   },
-  {
-    "id": "An illustrative delivery pipeline: commit, check, build, deploy, and observe.",
+  "pipeline.label": {
     "en": "An illustrative delivery pipeline: commit, check, build, deploy, and observe."
   },
-  {
-    "id": "Less friction.",
+  "pipeline.title": {
     "en": "Less friction."
   },
-  {
-    "id": "More flow.",
+  "pipeline.subtitle": {
     "en": "More flow."
   },
-  {
-    "id": "01 / SOURCE",
+  "pipeline.source.label": {
     "en": "01 / SOURCE"
   },
-  {
-    "id": "Commit",
+  "pipeline.source.title": {
     "en": "Commit"
   },
-  {
-    "id": "02 / VALIDATE",
+  "pipeline.validate.label": {
     "en": "02 / VALIDATE"
   },
-  {
-    "id": "Check",
+  "pipeline.validate.title": {
     "en": "Check"
   },
-  {
-    "id": "03 / PACKAGE",
+  "pipeline.package.label": {
     "en": "03 / PACKAGE"
   },
-  {
-    "id": "Build",
+  "pipeline.package.title": {
     "en": "Build"
   },
-  {
-    "id": "04 / RELEASE",
+  "pipeline.release.label": {
     "en": "04 / RELEASE"
   },
-  {
-    "id": "Deploy",
+  "pipeline.release.title": {
     "en": "Deploy"
   },
-  {
-    "id": "DESIGNED TO WORK TOGETHER",
+  "pipeline.caption": {
     "en": "DESIGNED TO WORK TOGETHER"
   },
-  {
-    "id": "/ 05 OBSERVE",
+  "pipeline.observe": {
     "en": "/ 05 OBSERVE"
   },
-  {
-    "id": "Page not found - Slick",
+  "error.meta": {
     "en": "Page not found - Slick"
   },
-  {
-    "id": "404 / A SMALL DETOUR",
+  "error.eyebrow": {
     "en": "404 / A SMALL DETOUR"
   },
-  {
-    "id": "This path ends here.",
+  "error.title": {
     "en": "This path ends here."
   },
-  {
-    "id": "Let’s get you back to something useful.",
+  "error.description": {
     "en": "Let’s get you back to something useful."
   },
-  {
-    "id": "Back to Slick",
+  "error.cta": {
     "en": "Back to Slick"
   },
-  {
-    "id": "Choose language",
+  "nav.language": {
     "en": "Choose language"
   },
-  {
-    "id": "7+ years in production infrastructure — from a 170+ VM environment at Georgia's High Council of Justice to security pipelines at EPAM Systems today.",
+  "hero.proof": {
     "en": "7+ years in production infrastructure — from a 170+ VM environment at Georgia's High Council of Justice to security pipelines at EPAM Systems today."
   },
-  {
-    "id": "Recent example: built a Go-based Telegram bot for automated search and download workflows, and use n8n / Node-RED for day-to-day integrations.",
-    "en": "Recent example: built a Go-based Telegram bot for automated search and download workflows, and use n8n / Node-RED for day-to-day integrations."
+  "services.automation.proof": {
+    "en": "Recent example: automated report generation and downloads, then parsed the data and visualized the results to make recurring reporting easier."
   },
-  {
-    "id": "At JSC Liberty Bank, I overhauled build, deploy, and rollback pipelines across every application — frontend and backend — including apps that had no automation at all before.",
+  "services.delivery.proof": {
     "en": "At JSC Liberty Bank, I overhauled build, deploy, and rollback pipelines across every application — frontend and backend — including apps that had no automation at all before."
   },
-  {
-    "id": "Currently working hands-on with GitHub Advanced Security, CodeQL, and Mend.io in production at EPAM Systems.",
+  "services.security.proof": {
     "en": "Currently working hands-on with GitHub Advanced Security, CodeQL, and Mend.io in production at EPAM Systems."
   },
-  {
-    "id": "Managed and supported 170+ Windows and Linux virtual machines at Georgia's High Council of Justice, and run a full Proxmox/Kubernetes/Ansible homelab in my own time.",
+  "services.infrastructure.proof": {
     "en": "Managed and supported 170+ Windows and Linux virtual machines at Georgia's High Council of Justice, and run a full Proxmox/Kubernetes/Ansible homelab in my own time."
   },
-  {
-    "id": "Daily driver",
+  "toolkit.daily": {
     "en": "Daily driver"
   },
-  {
-    "id": "Also used",
+  "toolkit.familiar": {
     "en": "Also used"
   },
-  {
-    "id": "Recent work",
+  "work.title": {
     "en": "Recent work"
   },
-  {
-    "id": "RECENT WORK",
+  "work.eyebrow": {
     "en": "RECENT WORK"
   },
-  {
-    "id": "A few places where I have worked hands-on with production systems.",
+  "work.description": {
     "en": "A few places where I have worked hands-on with production systems."
   },
-  {
-    "id": "System Engineer",
+  "work.epam.role": {
     "en": "System Engineer"
   },
-  {
-    "id": "2025–present",
+  "work.epam.period": {
     "en": "2025–present"
   },
-  {
-    "id": "2022–2025",
+  "work.liberty.period": {
     "en": "2022–2025"
   },
-  {
-    "id": "2021–2022",
+  "work.justice.period": {
     "en": "2021–2022"
   },
-  {
-    "id": "GHAS/CodeQL/Mend.io security scanning, GCP-focused.",
+  "work.epam.description": {
     "en": "GHAS/CodeQL/Mend.io security scanning, GCP-focused."
   },
-  {
-    "id": "Application Server Administration",
+  "work.liberty.role": {
     "en": "Application Server Administration"
   },
-  {
-    "id": "rebuilt CI/CD and rollback pipelines for every application, frontend and backend.",
+  "work.liberty.description": {
     "en": "rebuilt CI/CD and rollback pipelines for every application, frontend and backend."
   },
-  {
-    "id": "Systems Administration",
+  "work.justice.role": {
     "en": "Systems Administration"
   },
-  {
-    "id": "High Council of Justice of Georgia",
+  "work.justice.org": {
     "en": "High Council of Justice of Georgia"
   },
-  {
-    "id": "provisioned and maintained 170+ virtual machines across Windows and Linux.",
+  "work.justice.description": {
     "en": "provisioned and maintained 170+ virtual machines across Windows and Linux."
   },
-  {
-    "id": "I'm Aleksandre, an independent DevOps and automation consultant working under the name Slick.",
+  "about.intro": {
     "en": "I'm Aleksandre, an independent DevOps and automation consultant working under the name Slick."
   },
-  {
-    "id": "My background spans systems administration, application server administration, and DevOps: from supporting 170+ VMs at Georgia's High Council of Justice, to overhauling CI/CD pipelines for every application at JSC Liberty Bank, to my current work in security scanning and cloud infrastructure at EPAM Systems.",
+  "about.background": {
     "en": "My background spans systems administration, application server administration, and DevOps: from supporting 170+ VMs at Georgia's High Council of Justice, to overhauling CI/CD pipelines for every application at JSC Liberty Bank, to my current work in security scanning and cloud infrastructure at EPAM Systems."
   },
-  {
-    "id": "I hold LPIC-1 and LPIC-2 certifications from the Linux Professional Institute, and a BSc in Electrical & Computer Engineering from the Agricultural University of Tbilisi. Outside of client work, I run a full homelab (Proxmox, Kubernetes, OPNsense) and build small tools for fun — including a remote-start system for a Gen 2/3 Toyota Prius as a university project.",
+  "about.credentials": {
     "en": "I hold LPIC-1 and LPIC-2 certifications from the Linux Professional Institute, and a BSc in Electrical & Computer Engineering from the Agricultural University of Tbilisi. Outside of client work, I run a full homelab (Proxmox, Kubernetes, OPNsense) and build small tools for fun — including a remote-start system for a Gen 2/3 Toyota Prius as a university project."
   },
-  {
-    "id": "Currently working hands-on in production at EPAM Systems — reach out if your team needs similar support.",
+  "contact.proof": {
     "en": "Currently working hands-on in production at EPAM Systems — reach out if your team needs similar support."
   },
-  {
-    "id": "Find me elsewhere",
+  "footer.social": {
     "en": "Find me elsewhere"
   },
-  {
-    "id": "Full CV",
+  "footer.cv": {
     "en": "Full CV"
   }
-]
+}
