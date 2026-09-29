@@ -26,6 +26,12 @@ npm test
 
 Browser checks cover desktop/mobile overflow, navigation, email links, disclosures, JavaScript-free navigation, and automated accessibility. `dist/` is the deployable static site, including self-hosted fonts.
 
+SEO checks also cover metadata, structured data, sitemap, robots and internal links across all seven content pages. Tests start a dedicated preview server on port 4327; keep that port free.
+
+## SEO and content
+
+See [implementation status and remaining deployment/account tasks](docs/seo-implementation.md). Service pages use `src/data/services.ts`; the CI/CD guide and downloadable checklist share `src/data/handover.ts`. Sitemap and robots are generated at build time using `SITE_URL` and `BASE_PATH`. Shared metadata and structured data live in `src/layouts/BaseLayout.astro` and `src/lib/seo.ts`.
+
 ## Container
 
 ```sh

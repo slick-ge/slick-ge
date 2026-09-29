@@ -274,3 +274,17 @@ nav > a:hover { color: var(--accent-strong); }
   .header-controls { order: 0; margin-left: auto; }
   .header-inner nav { order: 1; }
             }
+
+/* Service discovery and readable contact controls. */
+.hero-coverage { max-width: 520px; margin-top: 18px; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+.hero h1 { font-size: clamp(2.25rem, 4.3vw, 3.7rem); text-wrap: balance; }
+.service-card .service-outcome { color: var(--accent-strong); font-weight: 600; }
+.service-detail-link { margin-top: 22px; }
+.profile-socials a { min-height: 44px; padding-block: 10px; }
+.profile-service-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 20px; }
+.profile-about > p:not(.eyebrow) { max-width: 850px; margin-top: 20px; color: var(--muted); line-height: 1.8; }
+.profile-info-card .project-note { margin-top: auto; font-size: .8rem; }
+.profile-tool-group .tool-logo b { font-size: .75rem; white-space: normal; overflow-wrap: anywhere; }
+.profile-info-card time { font-size: .75rem; }
+.profile-hero-copy { min-width: 0; }
+.profile-actions .button { text-align: center; }

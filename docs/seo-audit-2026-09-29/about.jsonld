@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://slick.ge/#person",
+      "name": "Aleksandre Ghvineria",
+      "url": "https://slick.ge/en/about/",
+      "image": "https://slick.ge/aleksandre-ghvineria.jpeg",
+      "description": "Independent DevOps and automation consultant working under the name Slick.",
+      "sameAs": [
+        "https://github.com/ghvinerias",
+        "https://www.linkedin.com/in/aleksandre-ghvineria",
+        "https://cv.ghvineria.com/en/"
+      ]
+    },
+    {
+      "@type": [
+        "AboutPage",
+        "ProfilePage"
+      ],
+      "@id": "https://slick.ge/en/about/#webpage",
+      "url": "https://slick.ge/en/about/",
+      "name": "Aleksandre Ghvineria, DevOps Consultant | Slick",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://slick.ge/#website"
+      },
+      "mainEntity": {
+        "@id": "https://slick.ge/#person"
+      },
+      "breadcrumb": {
+        "@id": "https://slick.ge/en/about/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://slick.ge/en/about/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slick.ge/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Aleksandre",
+          "item": "https://slick.ge/en/about/"
+        }
+      ]
+    }
+  ]
+}

@@ -3,12 +3,30 @@ import Icon from '../components/Icon.astro';
 import Fonts from '../components/Fonts.astro';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { pageSchema, type Breadcrumb, type PageKind } from '../lib/seo';
+import { absoluteUrl } from '../lib/urls';
+import type { ServicePage } from '../data/services';
 import { translator, localePath, type Locale } from '../i18n';
-interface Props { locale?: Locale; title?: string; description?: string; alternates?: boolean; }
-const { locale = 'en', alternates = true } = Astro.props;
+interface Props {
+  locale?: Locale;
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+  pageKind?: PageKind;
+  breadcrumbs?: Breadcrumb[];
+  service?: ServicePage;
+}
+const { locale = 'en', noindex = false, pageKind, breadcrumbs = [], service } = Astro.props;
 const t = translator(locale);
 const { title = t('meta.title'), description = t('meta.description') } = Astro.props;
+if (!Astro.site) throw new Error('Set Astro site for canonical and structured-data URLs.');
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const portrait = absoluteUrl('aleksandre-ghvineria.jpeg', Astro.site);
+const structuredData = !noindex && pageKind ? pageSchema({
+  site: Astro.site, canonical: canonical.href, title, description,
+  kind: pageKind, breadcrumbs, service,
+}) : undefined;
 ---
 <!doctype html>
 <html lang={locale}>
@@ -19,22 +37,52 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="theme-color" content="#E0E5EC" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
-    {alternates && <>
-      <link rel="alternate" hreflang="en" href={new URL(localePath('en'), Astro.site)} />
-      <link rel="alternate" hreflang="x-default" href={new URL(localePath('en'), Astro.site)} />
-    </>}
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <link rel="canonical" href={canonical} />}
     <meta property="og:locale" content="en_US" />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    {!noindex && <>
+      <meta property="og:site_name" content="Slick" />
+      <meta property="og:image" content={portrait} />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="400" />
+      <meta property="og:image:alt" content="Aleksandre Ghvineria, the independent consultant behind Slick" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={portrait} />
+      <meta name="twitter:image:alt" content="Aleksandre Ghvineria, the independent consultant behind Slick" />
+    </>}
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />}
   </head>
   <body>
     <a class="skip-link button" href="#main">{t("nav.skip")}</a>
     <Header locale={locale} />
-    <main id="main"><slot /></main>
-    <footer class="container site-footer"><a class="wordmark" href={localePath('en')} aria-label={t("nav.home")}>slick<span>.</span></a><p>{t("footer.tagline")}</p><nav class="footer-links" aria-label={t("footer.social")}><span>{t("footer.social")}</span><a href="https://github.com/ghvinerias" rel="me"><Icon name="github" size={16} />GitHub</a><a href="https://linkedin.com/in/aleksandre-ghvineria" rel="me"><Icon name="linkedin" size={16} />LinkedIn</a><a href="https://cv.ghvineria.com">{t("footer.cv")}</a></nav><span>© {new Date().getFullYear()} Slick</span></footer>
+    <main id="main" tabindex="-1">
+      {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
+      <slot />
+    </main>
+    <footer class="container site-footer"><a class="wordmark" href={localePath('en')} aria-label={t("nav.home")}>slick<span>.</span></a><p>{t("footer.tagline")}</p><nav class="footer-links" aria-label={t("footer.social")}><span>{t("footer.social")}</span><a href="https://github.com/ghvinerias" rel="me"><Icon name="github" size={16} />GitHub</a><a href="https://linkedin.com/in/aleksandre-ghvineria" rel="me"><Icon name="linkedin" size={16} />LinkedIn</a><a href="https://cv.ghvineria.com/en/">{t("footer.cv")}</a></nav><span>© {new Date().getFullYear()} Slick</span></footer>
+
+<script>
+  // Integration hook only: no analytics vendor, storage, or personal data.
+  document.addEventListener('click', event => {
+    const target = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href]') : null;
+    if (!target) return;
+    const method = target.protocol === 'mailto:' ? 'email' : target.protocol === 'tel:' ? 'phone' : undefined;
+    if (!method) return;
+    window.dispatchEvent(new CustomEvent('slick:contact-intent', {
+      detail: {
+        name: `contact_${method}_click`,
+        page: window.location.pathname,
+        location: target.closest('section')?.id || 'page',
+      },
+    }));
+  });
+</script>
+
   </body>
 </html>

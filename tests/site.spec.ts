@@ -5,8 +5,8 @@ test('landing page is accessible, responsive, and functional', async ({ page, is
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/en/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Less manual work');
-  await expect(page.getByRole('link', { name: 'Let’s simplify your setup' })).toHaveAttribute('href', 'mailto:Aleksandre.Ghvineria@slick.ge');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('DevOps and automation');
+  await expect(page.getByRole('link', { name: 'Discuss your DevOps project' })).toHaveAttribute('href', 'mailto:Aleksandre.Ghvineria@slick.ge');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   if (isMobile) {
     const menu = page.locator('.menu-toggle');
@@ -23,7 +23,7 @@ test('landing page is accessible, responsive, and functional', async ({ page, is
   await group.locator('summary').click();
   await expect(group).toHaveAttribute('open', '');
   await expect(group.getByText('CodeQL', { exact: true })).toBeVisible();
-  const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+  const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
   expect(results.violations).toEqual([]);
   expect(errors).toEqual([]);
   await page.goto('/en/');
@@ -31,10 +31,10 @@ test('landing page is accessible, responsive, and functional', async ({ page, is
   await page.screenshot({ path: `test-results/landing-${isMobile ? 'mobile' : 'desktop'}.png`, fullPage: true });
 });
 
-test('content remains navigable without JavaScript', async ({ browser }) => {
-  const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 375, height: 812 } });
+test('content remains navigable without JavaScript', async ({ browser, baseURL }) => {
+  const context = await browser.newContext({ baseURL, javaScriptEnabled: false, viewport: { width: 375, height: 812 } });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4321/en/');
+  await page.goto('/en/');
   await expect(page.getByRole('navigation').getByRole('link', { name: 'Services' })).toBeVisible();
   await context.close();
 });
@@ -44,13 +44,13 @@ test('English is the default and preserves the section', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveURL('/en/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Less manual work.');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('DevOps and automation');
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slick.ge/en/');
   for (const width of [320, 390, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `overflow at ${width}px`).toBe(true);
   }
-  const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+  const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
   expect(results.violations).toEqual([]);
   await page.goto('/en/');
   await page.emulateMedia({ reducedMotion: 'reduce' });

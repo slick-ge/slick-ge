@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://slick.ge/#person",
+      "name": "Aleksandre Ghvineria",
+      "url": "https://slick.ge/en/about/",
+      "image": "https://slick.ge/aleksandre-ghvineria.jpeg",
+      "description": "Independent DevOps and automation consultant working under the name Slick.",
+      "sameAs": [
+        "https://github.com/ghvinerias",
+        "https://www.linkedin.com/in/aleksandre-ghvineria",
+        "https://cv.ghvineria.com/en/"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://slick.ge/#service-delivery",
+      "name": "CI/CD Consulting & Pipeline Automation",
+      "url": "https://slick.ge/en/services/ci-cd/",
+      "description": "CI/CD consulting for small software teams, covering build pipelines, repeatable releases, rollback, and documented handover.",
+      "provider": {
+        "@id": "https://slick.ge/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://slick.ge/en/services/ci-cd/#webpage",
+      "url": "https://slick.ge/en/services/ci-cd/",
+      "name": "CI/CD Consulting & Pipeline Automation | Slick",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://slick.ge/#website"
+      },
+      "mainEntity": {
+        "@id": "https://slick.ge/#service-delivery"
+      },
+      "breadcrumb": {
+        "@id": "https://slick.ge/en/services/ci-cd/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://slick.ge/en/services/ci-cd/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slick.ge/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CI/CD consulting",
+          "item": "https://slick.ge/en/services/ci-cd/"
+        }
+      ]
+    }
+  ]
+}
