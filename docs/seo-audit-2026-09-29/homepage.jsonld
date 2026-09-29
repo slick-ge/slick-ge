@@ -1,0 +1,95 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://slick.ge/#website",
+      "url": "https://slick.ge/",
+      "name": "Slick",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://slick.ge/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://slick.ge/#person",
+      "name": "Aleksandre Ghvineria",
+      "url": "https://slick.ge/en/about/",
+      "image": "https://slick.ge/aleksandre-ghvineria.jpeg",
+      "description": "Independent DevOps and automation consultant working under the name Slick.",
+      "sameAs": [
+        "https://github.com/ghvinerias",
+        "https://www.linkedin.com/in/aleksandre-ghvineria",
+        "https://cv.ghvineria.com/en/"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://slick.ge/en/#webpage",
+      "url": "https://slick.ge/en/",
+      "name": "DevOps Consulting for Small Software Teams | Slick",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://slick.ge/#website"
+      },
+      "about": {
+        "@id": "https://slick.ge/#person"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://slick.ge/#service-automation"
+        },
+        {
+          "@id": "https://slick.ge/#service-delivery"
+        },
+        {
+          "@id": "https://slick.ge/#service-security"
+        },
+        {
+          "@id": "https://slick.ge/#service-infrastructure"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://slick.ge/#service-automation",
+      "name": "Workflow automation",
+      "description": "Connect tools and automate recurring tasks.",
+      "url": "https://slick.ge/en/#services",
+      "provider": {
+        "@id": "https://slick.ge/#person"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://slick.ge/#service-delivery",
+      "name": "CI/CD & delivery",
+      "description": "Build pipelines, repeatable releases, and release automation.",
+      "url": "https://slick.ge/en/#services",
+      "provider": {
+        "@id": "https://slick.ge/#person"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://slick.ge/#service-security",
+      "name": "Code & secrets security",
+      "description": "Integrate code scanning, dependency checks, and secrets management into developer workflows.",
+      "url": "https://slick.ge/en/#services",
+      "provider": {
+        "@id": "https://slick.ge/#person"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://slick.ge/#service-infrastructure",
+      "name": "Cloud & infrastructure",
+      "description": "Simplify environments and move manual configuration into repeatable infrastructure as code.",
+      "url": "https://slick.ge/en/#services",
+      "provider": {
+        "@id": "https://slick.ge/#person"
+      }
+    }
+  ]
+}

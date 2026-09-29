@@ -1,9 +1,9 @@
 {
   "meta.title": {
-    "en": "Slick - DevOps & automation for small software teams"
+    "en": "DevOps Consulting for Small Software Teams | Slick"
   },
   "meta.description": {
-    "en": "I help small software teams automate workflows, improve CI/CD, strengthen code security, and simplify infrastructure."
+    "en": "Work directly with Aleksandre Ghvineria to automate workflows, improve CI/CD, secure code and secrets, and simplify cloud infrastructure."
   },
   "nav.home": {
     "en": "Slick home"
@@ -42,16 +42,16 @@
     "en": "SMALL TEAMS. SMOOTHER SYSTEMS."
   },
   "hero.title": {
-    "en": "Less manual work."
+    "en": "DevOps and automation"
   },
   "hero.subtitle": {
-    "en": "More forward motion."
+    "en": "for small software teams"
   },
   "hero.description": {
-    "en": "Your team has better things to build. I help you automate the busywork, simplify infrastructure, and ship with confidence."
+    "en": "Work directly with Aleksandre Ghvineria to automate recurring work, improve CI/CD, bring code and secrets checks into your workflow, and simplify infrastructure."
   },
   "hero.cta": {
-    "en": "Let’s simplify your setup"
+    "en": "Discuss your DevOps project"
   },
   "hero.services": {
     "en": "Explore services"
@@ -81,7 +81,7 @@
     "en": "WHAT I CAN HELP WITH"
   },
   "services.title": {
-    "en": "Good systems give you room to build."
+    "en": "DevOps services"
   },
   "services.description": {
     "en": "Practical engineering support for the things that slow your team down. From a single workflow to the infrastructure behind it."
@@ -162,7 +162,7 @@
     "en": "HOW WE GET THERE"
   },
   "approach.title": {
-    "en": "Clear steps. Shared understanding."
+    "en": "How we work together"
   },
   "approach.description": {
     "en": "You work directly with me, from the first conversation to the final handover."
@@ -240,13 +240,13 @@
     "en": "LET’S MAKE THINGS SIMPLER"
   },
   "contact.title": {
-    "en": "What’s slowing your team down?"
+    "en": "Discuss your setup"
   },
   "contact.description": {
-    "en": "A stubborn pipeline? Too many manual steps? A setup that’s getting hard to manage? Tell me what you’re working with."
+    "en": "Tell me about your team, your current setup, and what you want to improve. Let me know whether you are looking for a defined project or ongoing engineering support."
   },
   "contact.cta": {
-    "en": "Let’s talk about it"
+    "en": "Email Aleksandre"
   },
   "pipeline.label": {
     "en": "An illustrative delivery pipeline: commit, check, build, deploy, and observe."
@@ -306,7 +306,7 @@
     "en": "Choose language"
   },
   "hero.proof": {
-    "en": "7+ years in production infrastructure — from a 170+ VM environment at Georgia's High Council of Justice to security pipelines at EPAM Systems today."
+    "en": "Production experience across systems administration, delivery pipelines and code security."
   },
   "services.automation.proof": {
     "en": "Recent example: automated report generation and downloads, then parsed the data and visualized the results to make recurring reporting easier."
@@ -327,13 +327,13 @@
     "en": "Also used"
   },
   "work.title": {
-    "en": "Recent work"
+    "en": "Relevant engineering experience"
   },
   "work.eyebrow": {
     "en": "RECENT WORK"
   },
   "work.description": {
-    "en": "A few places where I have worked hands-on with production systems."
+    "en": "Employment experience working hands-on with production systems."
   },
   "work.epam.role": {
     "en": "System Engineer"
@@ -375,7 +375,7 @@
     "en": "I hold LPIC-1 and LPIC-2 certifications from the Linux Professional Institute, and a BSc in Electrical & Computer Engineering from the Agricultural University of Tbilisi. Outside of client work, I run a full homelab (Proxmox, Kubernetes, OPNsense) and build small tools for fun — including a remote-start system for a Gen 2/3 Toyota Prius as a university project."
   },
   "contact.proof": {
-    "en": "Currently working hands-on in production at EPAM Systems — reach out if your team needs similar support."
+    "en": "You work directly with me, from the first conversation to handover."
   },
   "footer.social": {
     "en": "Find me elsewhere"
@@ -391,5 +391,41 @@
   },
   "about.card.profile": {
     "en": "More about me"
+  },
+  "hero.coverage": {
+    "en": "Remote support for international software teams. Scoped implementation projects and ongoing engineering support."
+  },
+  "services.automation.link": {
+    "en": "Explore workflow automation"
+  },
+  "services.delivery.link": {
+    "en": "Explore CI/CD consulting"
+  },
+  "services.security.link": {
+    "en": "Explore code and secrets security"
+  },
+  "services.infrastructure.link": {
+    "en": "Explore cloud and infrastructure"
+  },
+  "engagement.eyebrow": {
+    "en": "WORKING TOGETHER"
+  },
+  "engagement.title": {
+    "en": "Scoped projects and ongoing support"
+  },
+  "engagement.description": {
+    "en": "Remote collaboration with international software teams. Tell me about your current setup and what you want to improve."
+  },
+  "engagement.project.title": {
+    "en": "A defined implementation project"
+  },
+  "engagement.project.description": {
+    "en": "Bring a pipeline, workflow or infrastructure problem. We can discuss the work needed and what a useful result looks like for your team."
+  },
+  "engagement.support.title": {
+    "en": "Ongoing engineering support"
+  },
+  "engagement.support.description": {
+    "en": "Get help with improvements as your systems and priorities evolve. Tell me where your team needs continuing support."
   }
 }

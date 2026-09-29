@@ -1,0 +1,22 @@
+---
+export interface Breadcrumb { name: string; href: string; }
+interface Props { items: Breadcrumb[]; }
+const { items } = Astro.props;
+---
+<nav class="container breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    {items.map((item, index) => <li>
+      {index > 0 && <span aria-hidden="true">/</span>}
+      {index === items.length - 1
+        ? <span aria-current="page">{item.name}</span>
+        : <a href={item.href}>{item.name}</a>}
+    </li>)}
+  </ol>
+</nav>
+<style>
+  .breadcrumbs { display: block; padding-block: 24px 0; }
+  ol { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+  li { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: .8rem; }
+  a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
+  a:hover { color: var(--accent-strong); }
+</style>

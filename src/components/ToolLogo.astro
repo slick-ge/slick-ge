@@ -3,8 +3,9 @@ import { toolLogo } from '../data/profile';
 
 interface Props { name: string; }
 const { name } = Astro.props;
+const src = toolLogo(name);
 ---
-<img class="tool-image" src={toolLogo(name)} alt="" loading="lazy" width="23" height="23" />
+{src && <img class="tool-image" src={src} alt="" loading="lazy" width="23" height="23" />}
 
 <style>
   .tool-image { width: 23px; height: 23px; flex-shrink: 0; object-fit: contain; }

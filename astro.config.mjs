@@ -4,6 +4,7 @@ export default defineConfig({
   site: process.env.SITE_URL || 'https://slick.ge',
   base: process.env.BASE_PATH || '/',
   output: 'static',
+  trailingSlash: 'always',
   vite: {
     server: {
       watch: {

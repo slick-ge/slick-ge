@@ -1,11 +1,11 @@
 import type { ContentId } from '../i18n';
 
 export const email = 'Aleksandre.Ghvineria@slick.ge';
-export const services: { number: string; icon: string; title: ContentId; label: ContentId; description: ContentId; proof: ContentId; tags: ContentId[] }[] = [
-  { number: '01', icon: 'workflow', title: 'services.automation.title', label: 'services.automation.label', description: 'services.automation.description', proof: 'services.automation.proof', tags: ['tags.integrations', 'tags.tooling', 'tags.operations'] },
-  { number: '02', icon: 'terminal', title: 'services.delivery.title', label: 'services.delivery.label', description: 'services.delivery.description', proof: 'services.delivery.proof', tags: ['tags.pipelines', 'tags.releases', 'tags.gitops'] },
-  { number: '03', icon: 'shield', title: 'services.security.title', label: 'services.security.label', description: 'services.security.description', proof: 'services.security.proof', tags: ['tags.ghas', 'tags.secrets'] },
-  { number: '04', icon: 'layers', title: 'services.infrastructure.title', label: 'services.infrastructure.label', description: 'services.infrastructure.description', proof: "services.infrastructure.proof", tags: ['tags.iac', 'tags.cloud', 'tags.containers'] },
+export const services: { slug: string; link: ContentId; number: string; icon: string; title: ContentId; label: ContentId; description: ContentId; proof: ContentId; tags: ContentId[] }[] = [
+  { slug: 'workflow-automation', link: 'services.automation.link', number: '01', icon: 'workflow', title: 'services.automation.title', label: 'services.automation.label', description: 'services.automation.description', proof: 'services.automation.proof', tags: ['tags.integrations', 'tags.tooling', 'tags.operations'] },
+  { slug: 'ci-cd', link: 'services.delivery.link', number: '02', icon: 'terminal', title: 'services.delivery.title', label: 'services.delivery.label', description: 'services.delivery.description', proof: 'services.delivery.proof', tags: ['tags.pipelines', 'tags.releases', 'tags.gitops'] },
+  { slug: 'code-secrets-security', link: 'services.security.link', number: '03', icon: 'shield', title: 'services.security.title', label: 'services.security.label', description: 'services.security.description', proof: 'services.security.proof', tags: ['tags.ghas', 'tags.secrets'] },
+  { slug: 'cloud-infrastructure', link: 'services.infrastructure.link', number: '04', icon: 'layers', title: 'services.infrastructure.title', label: 'services.infrastructure.label', description: 'services.infrastructure.description', proof: "services.infrastructure.proof", tags: ['tags.iac', 'tags.cloud', 'tags.containers'] },
 ];
 export const process: { title: ContentId; text: ContentId }[] = [
   { title: 'approach.understand.title', text: 'approach.understand.description' },

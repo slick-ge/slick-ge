@@ -3,4 +3,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { translator, localePath } from '../i18n';
 const t = translator('en');
 ---
-<BaseLayout locale="en" title={t('error.meta')} alternates={false}><section class="container error-page"><p class="eyebrow">{t('error.eyebrow')}</p><h1>{t('error.title')}</h1><p>{t('error.description')}</p><a class="button button-primary" href={localePath('en')}>{t('error.cta')}</a></section></BaseLayout>
+<BaseLayout locale="en" title={t('error.meta')} description="The requested page could not be found. Return to Slick’s DevOps consulting homepage." noindex><section class="container error-page"><p class="eyebrow">{t('error.eyebrow')}</p><h1>{t('error.title')}</h1><p>{t('error.description')}</p><a class="button button-primary" href={localePath('en')}>{t('error.cta')}</a></section></BaseLayout>
