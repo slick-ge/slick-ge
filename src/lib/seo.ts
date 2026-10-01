@@ -2,10 +2,10 @@ import { profile } from '../data/profile';
 import { servicePages, type ServicePage } from '../data/services';
 import { sitePath, absoluteUrl } from './urls';
 
-export const guidePath = 'en/guides/ci-cd-handover-checklist/';
+export const guidePath = 'guides/ci-cd-handover-checklist/';
 export const indexablePaths = [
-  'en/', 'en/about/',
-  ...servicePages.map(service => `en/services/${service.slug}/`),
+  '', 'about/',
+  ...servicePages.map(service => `services/${service.slug}/`),
   guidePath,
 ];
 
@@ -21,7 +21,7 @@ export function pageSchema({ site, canonical, title, description, kind, breadcru
   const websiteId = `${root}#website`;
   const person = {
     '@type': 'Person', '@id': personId,
-    name: profile.en.name, url: absoluteUrl('en/about/', site),
+    name: profile.en.name, url: absoluteUrl('about/', site),
     image: absoluteUrl('aleksandre-ghvineria.jpeg', site),
     description: profile.en.summary,
     sameAs: ['https://github.com/ghvinerias', 'https://www.linkedin.com/in/aleksandre-ghvineria', 'https://cv.ghvineria.com/en/'],
@@ -29,7 +29,7 @@ export function pageSchema({ site, canonical, title, description, kind, breadcru
   const serviceNode = (item: ServicePage) => ({
     '@type': 'Service', '@id': `${root}#service-${item.id}`,
     name: item.name, description: item.description,
-    url: absoluteUrl(`en/services/${item.slug}/`, site),
+    url: absoluteUrl(`services/${item.slug}/`, site),
     provider: { '@id': personId },
   });
   const page: Record<string, unknown> = {
@@ -65,5 +65,5 @@ export function pageSchema({ site, canonical, title, description, kind, breadcru
 }
 
 export function pageBreadcrumb(name: string, path: string): Breadcrumb[] {
-  return [{ name: 'Home', href: sitePath('en/') }, { name, href: sitePath(path) }];
+  return [{ name: 'Home', href: sitePath('') }, { name, href: sitePath(path) }];
 }

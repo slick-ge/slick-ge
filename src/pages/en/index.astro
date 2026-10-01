@@ -1,4 +1,4 @@
 ---
-import LandingPage from "../../components/LandingPage.astro";
+import { sitePath } from '../../lib/urls';
+return Astro.redirect(sitePath(), 301);
 ---
-<LandingPage locale="en" />

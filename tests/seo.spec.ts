@@ -2,13 +2,22 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 const contentPaths = [
-  '/en/', '/en/about/',
-  '/en/services/ci-cd/', '/en/services/code-secrets-security/',
-  '/en/services/workflow-automation/', '/en/services/cloud-infrastructure/',
-  '/en/guides/ci-cd-handover-checklist/',
+  '/', '/about/',
+  '/services/ci-cd/', '/services/code-secrets-security/',
+  '/services/workflow-automation/', '/services/cloud-infrastructure/',
+  '/guides/ci-cd-handover-checklist/',
 ];
 
-for (const path of contentPaths.filter(path => path !== '/en/')) {
+test('previous English URLs redirect to the unprefixed pages', async ({ page }) => {
+  for (const path of contentPaths) {
+    await page.goto(`/en${path}`);
+    await expect(page).toHaveURL(path);
+    await expect(page.locator('h1')).toBeVisible();
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `https://slick.ge${path}`);
+  }
+});
+
+for (const path of contentPaths.filter(path => path !== '/')) {
   test(`${path} has accessible content and accurate page metadata`, async ({ page, isMobile }) => {
     const response = await page.goto(path);
     expect(response?.status()).toBe(200);
@@ -38,7 +47,7 @@ for (const path of contentPaths.filter(path => path !== '/en/')) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
     expect(results.violations).toEqual([]);
-    if (path === '/en/about/' || path === '/en/services/ci-cd/' || path.includes('/guides/')) {
+    if (path === '/about/' || path === '/services/ci-cd/' || path.includes('/guides/')) {
       await page.emulateMedia({ reducedMotion: 'reduce' });
       await page.screenshot({ path: `test-results/${path.split('/').filter(Boolean).join('-')}-${isMobile ? 'mobile' : 'desktop'}.png`, fullPage: true });
     }
@@ -87,7 +96,7 @@ test('sitemap, no-JS links and first-party assets describe a complete crawlable 
     url.hash = '';
     expect((await request.get(url.href)).status(), target).toBe(200);
   }
-  const privateLink = await request.get('/en/about/');
+  const privateLink = await request.get('/about/');
   expect(await privateLink.text()).not.toContain('https://github.com/slick-ge/secret-santa-backend');
   await context.close();
 });
@@ -100,12 +109,12 @@ test('error pages are excluded and tracking parameters retain the clean canonica
   await expect(page.locator('script[type="application/ld+json"]')).toHaveCount(0);
   const errorFile = await request.get('/404.html');
   expect(await errorFile.text()).toContain('noindex, follow');
-  await page.goto('/en/services/ci-cd/?utm_source=verification');
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slick.ge/en/services/ci-cd/');
+  await page.goto('/services/ci-cd/?utm_source=verification');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slick.ge/services/ci-cd/');
 });
 
 test('contact intent hook preserves email navigation and excludes personal data', async ({ page }) => {
-  await page.goto('/en/services/ci-cd/?utm_source=private-campaign');
+  await page.goto('/services/ci-cd/?utm_source=private-campaign');
   const result = await page.evaluate(() => {
     let detail: unknown;
     window.addEventListener('slick:contact-intent', event => { detail = (event as CustomEvent).detail; }, { once: true });
@@ -118,11 +127,11 @@ test('contact intent hook preserves email navigation and excludes personal data'
   });
   expect(result.defaultWasPrevented).toBe(false);
   expect(result.href).toMatch(/^mailto:Aleksandre.Ghvineria@slick.ge/);
-  expect(result.detail).toEqual({ name: 'contact_email_click', page: '/en/services/ci-cd/', location: 'contact' });
+  expect(result.detail).toEqual({ name: 'contact_email_click', page: '/services/ci-cd/', location: 'contact' });
 });
 
 test('handover checklist download includes the same actionable checks as the guide', async ({ page, request }) => {
-  await page.goto('/en/guides/ci-cd-handover-checklist/');
+  await page.goto('/guides/ci-cd-handover-checklist/');
   const response = await request.get('/ci-cd-handover-checklist.md');
   expect(response.status()).toBe(200);
   const markdown = await response.text();

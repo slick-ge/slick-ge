@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { handoverSections } from '../../data/handover';
+import { pageBreadcrumb, guidePath } from '../../lib/seo';
+import { sitePath } from '../../lib/urls';
+import '../../styles/editorial.css';
+---
+<BaseLayout title="CI/CD Handover Checklist for Small Teams | Slick" description="Check pipeline ownership, release steps, rollback, credentials, and documentation before taking over a CI/CD system." pageKind="guide" breadcrumbs={pageBreadcrumb('CI/CD handover checklist', guidePath)}>
+  <article class="container editorial">
+    <header class="editorial-hero">
+      <p class="eyebrow">A PRACTICAL DELIVERY GUIDE</p>
+      <h1>A practical CI/CD handover checklist</h1>
+      <p class="editorial-lead">Use this checklist when your team takes over a pipeline from a colleague, contractor or another team. It helps you review the system, its documentation and the responsibilities that come with running it.</p>
+      <p class="editorial-byline">By <a href={sitePath('about/')}>Aleksandre Ghvineria</a> · Independent DevOps and automation consultant</p>
+      <a class="button" href={sitePath('ci-cd-handover-checklist.md')} download>Download the checklist (Markdown) <Icon name="diagonal" size={18} /></a>
+    </header>
+    <div class="editorial-layout">
+      <div class="editorial-body">
+        <section class="editorial-section surface-small" aria-labelledby="using-title">
+          <h2 id="using-title">Use it as a walkthrough</h2>
+          <p>Work through the questions together, mark what has been checked, and assign an owner to anything outstanding. Adapt the list to your application and deployment model. Each checked item should point to something the receiving team can find, explain or demonstrate.</p>
+          <p>Keep credentials in their designated secrets manager. The handover should explain where they are managed and how access is granted, rather than reproduce their values.</p>
+        </section>
+        {handoverSections.map(section => <section class="editorial-section" id={section.id} aria-labelledby={`${section.id}-title`}>
+          <h2 id={`${section.id}-title`}>{section.title}</h2>
+          <p>{section.description}</p>
+          <ul class="editorial-list">{section.checks.map(check => <li>{check}</li>)}</ul>
+        </section>)}
+        <section class="editorial-section" aria-labelledby="references-title">
+          <h2 id="references-title">Check the details for your platform</h2>
+          <p>Platform behavior and repository settings affect who can deploy, approve or repeat a job. Use the current documentation for your CI/CD system alongside the checklist.</p>
+          <ul class="editorial-list">
+            <li><a href="https://docs.github.com/en/actions/how-tos/manage-workflow-runs/re-run-workflows-and-jobs">GitHub Actions: re-running workflows and jobs</a></li>
+            <li><a href="https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments">GitHub Actions: managing deployment environments</a></li>
+          </ul>
+        </section>
+        <section class="editorial-section surface" aria-labelledby="help-title">
+          <h2 id="help-title">Need help improving the pipeline first?</h2>
+          <p>A handover can reveal missing documentation, fragile release steps or unclear rollback. If the work needs more than a checklist, explore how I help small software teams with CI/CD implementation and ongoing support.</p>
+          <a class="text-link" href={sitePath('services/ci-cd/')}>Explore CI/CD consulting <Icon name="arrow" size={18} /></a>
+        </section>
+      </div>
+      <aside class="editorial-aside" aria-label="Checklist sections">
+        <div class="surface-small"><h2>In this checklist</h2><ul>{handoverSections.map(section => <li><a href={`#${section.id}`}>{section.title}</a></li>)}</ul></div>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>

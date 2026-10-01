@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:4321. Shared landing sections live in `src/components/LandingPage.astro`, the dedicated CV-style profile is at `/en/about/`, tools and service definitions live in `src/data/site.ts`, and localized copy is stored in `src/i18n/content.json`. Design tokens live in `src/styles/tokens.css`.
+Open http://localhost:4321. Shared landing sections live in `src/components/LandingPage.astro`, the dedicated CV-style profile is at `/about/`, tools and service definitions live in `src/data/site.ts`, and localized copy is stored in `src/i18n/content.json`. Design tokens live in `src/styles/tokens.css`.
 
 For a live-reloading Docker development server, run `docker compose -f compose.dev.yaml up --build` and open http://localhost:4321. The repository is mounted into the container, so edits reload automatically. Stop it with `docker compose -f compose.dev.yaml down`.
 
@@ -58,7 +58,7 @@ Pushes to main also deploy the static site to GitHub Pages with `slick.ge` as it
 
 ## Languages and translation review
 
-English is at `/en/`. The root `/` redirects to `/en/`. The site uses a single English route set and self-hosted Latin fonts.
+English is served directly at `/`, with the profile at `/about/` and service and guide pages under `/services/` and `/guides/`. Previous `/en/` URLs redirect to their corresponding unprefixed pages. The site uses a single English route set and self-hosted Latin fonts.
 
 Content lives in `src/i18n/content.json`, keyed by stable, descriptive IDs such as `hero.title` and `services.automation.proof`. Edit the `en` value to change copy; keep the key unchanged. Components and `src/data/site.ts` reference these keys, and the `ContentId` type catches unknown keys during `npm run check`.
 

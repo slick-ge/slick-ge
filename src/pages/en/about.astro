@@ -1,4 +1,4 @@
 ---
-import AboutPage from '../../components/AboutPage.astro';
+import { sitePath } from '../../lib/urls';
+return Astro.redirect(sitePath('about/'), 301);
 ---
-<AboutPage locale="en" />
